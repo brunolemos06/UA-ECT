@@ -1,0 +1,231 @@
+[critérios de Shannon]
+	1 - o comprimento da chave
+	2 - geração da chave
+	3 - simplicidade da realização
+	4 - a propagação de erros
+	5 - a dimensão do criptograma
+
+[Confusão e Difusão]
+	»»Confusão
+		- Complexidade na relação entre o {texto,chave,criptograma}
+		{Explicação} - Os bits do criptograma devem depender dos bits do texto e chave de uma forma complexa	
+	»»Difusão
+		- Alteração de grandes porçoes do criptograma em função de pequenas alterções do texto
+		{Explicação} - Se um bit do texto for alterado o criptograma deve alterar substancialmente e de forma imprevisível.[Efeito avalanche]
+
+[Assumir o pior caso de criptanalistas]
+	- A segurança está na chave
+	- Os criptogramas não são secretos
+	- É normal haver alguma noção do texto original
+
+[Rubustez Criptográfica]
+	- Algoritmos públicos, sem ataques conhecidos, supostamente são mais rubustos.
+	- ALgoritmos com chaves maiores são tendencialmnete mais robustos, mas frequentemente mais lentos.
+
+[Cifras continuas]
+	-> Cifra poli-alfabética simétrica
+	-> Cada caracter do texto é cifrado com um caracter de uma chave contínua
+	-> se efetuarmos um SHIFTREGISTER na Key temos a KeyStream(chave contínua), para inverter o processo usamos o XOR.
+	-> para decifar o texto usamos a KeyStream
+	-> o tamanho do texto deve ser inferior ao tamanho da cadeia
+	-> Cada simbolo da chave contínua define um alfabeto
+	-> só se pode usar uma vez a keystream, se não a soma dos criptogramas fornece a soma dos textos.
+ 
+
+[Cifra de Vernan]
+	-> Cada bit do texto a cifrar é cifrado por uma adição modular (EXEMPLO XOR, etc..) com um bit de uma chave aleatória 'pad'.
+	-> O 'pad' tem de ter o mesmo numero de bits do texto a cifrar.
+	
+	:::: PROBLEMAS ::::
+	. garantir aleatoriedade do pad
+	. tamanho do pad ser o tamanho do texto a cifrar
+	. garantir que o pad é usado apenas uma e única vez
+	
+[Cifra Moderna]
+	-> Cifra por blocos com chaves : simétricas | assimétrica .
+	-> Cifra continua com chave simétrica
+
+	Chaves simétricas são partilhadas por 2 ou mais pares.
+	
+	»»»»» Cifra por bloco com chave simétrica
+	»»»»» Cifra por blocos grandes(exemplo 64,128,256 bits)
+	- DES (Data Encryption Standard) -> blocos de 64b e chaves de 56b
+	- IDEA(International Data Encryption Algorithm) -> bloos de 64b e chaves de 128b
+	- AES(Advance Encryption Standard) -> Blocos variaveis, chaves de 128,192 ou 256b
+		
+[Redes de Substituição-Permutação]
+	-> S-Box{substituição}: baseado num bit de entrada, troca de bits da saída.
+		ideal : alteração de um bit provoca alteração de todos os bits
+		na realidade : a alteração de um bit provoca a alteração de pelo menos metade dos bits
+	-> P-Box{Permutação}: permutar posição de bits entre entrada e saída
+		ideal : permuta a posição de todos os bits.
+		na realidade: permuta metade dos bits.
+
+[Robustez]
+	-> Escolha de chaves
+		Uma chave de 56 bits existem 4 chaves fracas, 12 semi-frcas
+	->Ataques Conhecidos
+		Pesquisa exaustiva (possivel nas chaves de 56 bits)
+	ATUALMENTE AS CHAVES DE 56 BITS SÃO INSUFICIENTES
+	
+	SOLUÇÃO: Cifra dupla não é completamente segura
+		 Cifra tripla[3DES,tiple-DES]
+			. 2 ou 3 chaves
+			.chaves equi de 112 ou 168 bits
+			.usando a mesma chave, o algritmo é compatível com o DES
+
+##################################################################################
+##                                    MODOS                                     ##
+##################################################################################
+
+[ECB - Eletronic Code Block]
+	-> CIFRA   ---- Ci = Ek (Ti)
+	-> DECIFRA ---- Ti = Dk (Ci)
+	. cifra direta e decifra direta
+	::::: PROBLEMAS :::::
+	se T1 = T2 então (as cifras) C1 = C2
+
+[CBC - Cipher Block Chaining]
+	-> Cifra  ---- Ci = EK (Ti XOR Ci-1 )
+	->Decifra ---- Ti = DK (Ci) XOR Ci-1
+		
+	BLOCO INICIAL usa IV -> valor aleatório
+
+[PCBC (Propagation Cypher Block Chaining)]
+	Semelhante ao anterior , CBC
+	mas desta vez o XOR do texto a cifrar é feito com um XOR do texto a cifrar e texto cifrado do ultimo bloco
+	 -> Cifra  ---- Ci = Ek (Pi XOR P(i-1) XOR C(i-1) ), P0 XOR C0 = IV
+	 -> Decifra ---- Pi = Dk (Ci XOR P(i-1) XOR C(i-1) ), P0 XOR C0 = IV;
+	
+	BLOCO INICIAL usa IV -> valor aleatório
+
+[ _______PROBLEMAS DE ECB E CBC ]
+	Necessidade de textos com dimensão múltipla da dimensão do bloco
+	Blocos incompletos necessitam de tratamento diferenciado{ **UTLIMO BLOCO** }
+	O resultado pode ser maior do que o texto em claro (?????)
+
+	::RESOLUÇÃO::
+
+	-> PADDING		~~ Adicionar bits para preencher o ultimo bloco
+	->			~~ Cifrar o último bloco com uma cifra contínua
+	->Cyphertext Stealing	~~ troca a ordem de cifra/decifra e o resto dos bits mantêm-se
+
+[CFB (Cypher Feedback Mode)]
+	-> Entra no Block o Vetor com a respetiva key e sai um X. O outputText e a proxima entrada no proximo block é: X XOR PLAINTEXT
+ 
+[n-bit OFB (Output Feedback)]
+	-> Entra no Block o Vetor com a respetiva key e sai um X. O outputText é: X XOR PLAINTEXT,e a proxima entrada no proximo block é: X
+
+[CTR (Counter Mode)]
+	-> Entra no Block o Vetor contatenado com um counter com a respetiva key e sai um X. O OutpuTExt é : X XOR PlainText. No fim faz-se a contatenação de todos os outputs.
+
+###################################################################################
+
+[Cifra por bloco com chave assimétrica]
+	-> uso de um par de chaves (chave privada e uma pública)
+	-> cada agente tem um par de chaves. Se o agente1 enviar msg para o agente2, a msg vai ser encriptada pela chave publica do agente2, e apenas poderá ser desencriptada pela chave privada do agente2!
+  
+[RSA]
+	-> ?????????????????????????????????
+	-> ?????????????????????????????????
+
+[ElGamal]
+	-> ?????????????????????????????????
+	-> ?????????????????????????????????
+
+[Cifra continua com chave simétrica]
+	-> ????????????????????????????????
+	-> ????????????????????????????????
+
+[Reforço de segurança]
+	Podemos reforçar a segurança através de multiplas cifragens:
+		dupla cifragem   - facilmente quebrada.
+		tripla cifragem(cifra,decifra,cifra)(EDE)
+		Tecnica do branqueamento- uso de duas chaves mas gera CONFUSÃO[*]
+
+[MAC - Message Authentication Codes]
+        -> Só os conhecedores da chave conseguem gerar/validar o MAC
+
+##################################################################################
+##                           ASSINATURAS/CERTIFICADOS                           ##
+##################################################################################
+
+[Gestão de Chaves Assimétricas]
+[Problemas a resolver]
+-> Garantir a utilização apropriada dos pares de chaves.
+	- Privacidade das chaves Privadas
+	- Distribuição correta das chaves públicas
+	- Evolução temporal do mapeamento entre entidade <-> par de chaves
+	- Perda da chave privada
+	- Atualizar pares para reduzir riscos de impersonificação
+-> Garantir a geração corretas dos pares 
+	- Garantir uma qualidade dos pares de chave
+	- Melhorias de eficiência sem comprometer a segurança
+
+[Geração de Chaves: Principios]
+- Utilizar geradores bons na produção de segredos
+- Facilitar os processos sem comprometer a segurança
+- A chave privada deve ser gerada pelo próprio
+
+[Geração de chaves: cuidados]
+- A chave privada representa um sujeito e risco do seu comprometimento deve ser minimizado
+- O caminho de acesso à chave deve ser controlado
+- Armazenamento da chave numa entidade autónoma segura
+
+[Distribuição de Chaves Públicas]
+- A distribuição quem pretenda enviar/validar informação é feita de forma Ad-hoc usando certificados digitais
+==PROBLEMA== Garantir a correção de uma chave pública:
+	Usar caminhos ou garfos de relações de confiança. Se 'A' confia em X, e 'B' confia em 'A' ENTÃO 'B' confia em 'X'.
+-Hierarquias e garfos de certificação: expressões claras das relações de confiança entre entidades. O certificado é unidirencioanl.
+
+[Certificados digitais de chaves publicas]
+Documentos digitais emitidos por uma Entidade Certificadora (EC)/Certification Authority (CA)
+- Ligam uma key pública a uma entidade
+- São Documentos públicos
+- São seguros por meios criptográficos
+Usados para distribuir chaves públicas de forma confiável
+- os verificadores podem validar documentos
+- os verificadores confiam no comportamento das CA : Uma CA associou uma chave pública a A. Se o verificador confiar na CA, irá confiar que a associação de A é correta.
+
+[Utilizações de um par de chaves]
+O certificado associa um par de chaves a um perfil de utilização restrito
+
+[Entidades Certificadoras (CA)]
+- Organizações que gerem certificados de chave pública
+- Importante que operem corretamente para serem confiáveis
+- Gerem processos de revogação de certificados
+
+[HIERARQUIA DE CERTIFICAÇÃO – Apresenta dois modelos especificos]
+[PEM (Privacy Enhanced Mail)]
+-Distribuição de certificados para segurança de email através de cifragens com chaves públicas. A hierarquia tinha apenas um root (IPRA), seguido de vários PCA (Policy CertificateAuthorities) e vários CA’s
+[PGP (Pretty Good Privacy)]
+-Programa que se apresenta como uma rede de confiança, sem autoridades de
+confiança que se destaquem. Isto é, cada indivíduo pode certificar uma chave pública (um certificado) e
+publicar a assinatura para outros. Aqui a confiança nestes modos pode ser feita de duas maneiras: confiar
+nas chaves por nós conhecidas (usar meios necessários para saber se são de confiança), ou confiar no
+comportamento de cada certificado (ao usar o certificado, sabemos qual é o objetivo dele, e dessa forma
+podemos verificar se está a fazer o devido ou não). Por exemplo, se A confia em B, e B certifica C, então A
+pode confiar em C.
+
+[CERTIFICADO RAÍZ]
+- Certificado que foi auto-assinado pelo próprio emissor do certificado. Quando temos CA’s que
+assinam certificados de outras CA’s, vai haver sempre uma CA raíz, cujo certificado não pode ser assinado por
+ninguém superior. Dessa forma, essa CA assina o próprio certificado (self-signed certificate).
+
+[CRL (CERTIFICATE REVOCATION LISTS)]
+- Listas que contêm todos os certificados anulados, e a razão pela qual foram
+anulados.
+- No método ad-hoc, cada possuidor de uma chave anulada deve criar e distribuir um certificado de anulamento assinado pela
+chave privada anulada.
+
+[OCSP (ONLINE CERTIFICATE STATUS PROTOCOL)]
+- Protocolo usado para obter estados de anulamento de certificados X.509. É uma alternativa às CRL.
+- OCSP têm menos informação, então são mais rápidas a responder sobre o estado de anulamento de um certificado
+
+[PKI (Public Key Infrastructure)]
+-Infraestrutura (hardware, software, pessoas, politicas, planos) cujo objetivo é fazer
+um bom uso de chaves assimétricas e certificados de chaves públicas 
+- Um PKI estabelece relações de confiança
+
+
+#########################################################################################

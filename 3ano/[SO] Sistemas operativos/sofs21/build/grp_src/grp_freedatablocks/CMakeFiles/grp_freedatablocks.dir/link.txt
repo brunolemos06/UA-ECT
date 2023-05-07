@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/bruno/Desktop/UA-LECI/3ano/1semestre/sistemas_operativos/sofs21-so-5g3-1/lib/grp/libgrp_freedatablocks.a  CMakeFiles/grp_freedatablocks.dir/grp_alloc_datablock.cpp.o CMakeFiles/grp_freedatablocks.dir/grp_free_datablock.cpp.o CMakeFiles/grp_freedatablocks.dir/grp_replenish_from_cache.cpp.o CMakeFiles/grp_freedatablocks.dir/grp_replenish_from_bitmap.cpp.o CMakeFiles/grp_freedatablocks.dir/grp_deplete.cpp.o
+/usr/bin/ranlib /home/bruno/Desktop/UA-LECI/3ano/1semestre/sistemas_operativos/sofs21-so-5g3-1/lib/grp/libgrp_freedatablocks.a

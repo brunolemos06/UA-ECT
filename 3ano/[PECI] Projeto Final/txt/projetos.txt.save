@@ -1,0 +1,40 @@
+Ideias de temas de projetos para PECI:
+
+1) Identificação de caras e expressoes (feliz ou triste) ->
+   --pode resultar em alteraçoes do ambiente conforme o utilizador (ou maioria das pessoas ?) se sente,
+   --tocando musicas adequadas ou dad jokes (eheh), 
+   --um videojogo onde os controlos sao a pessoa sorrir ou estar triste fazendo algo no ecrã conforme, etc.
+   --Tambem ha a possibilidade de tirar fotos/selfies quando a pessoa está a sorrir
+
+2) Identificação de pessoas numa sala de espera ->
+   --Contagem de pessoas numa sala
+   --A identifição da pessoa
+   --Tocar um som ou uma mensagem de voz simples sempre que uma pessoa chega à sala.(Podemos intercalar isto com o mood geral das pessoas e tocar musicas conforme(?)
+   --Se seguirmos com identificaçao da pessoa, Podemos contar o numero de vezes que ela propria aparece no dado local
+   --historico de sentimentos
+   --historico de batimento cardiaco
+   --usando tracking, podemos fazer uma analise e perceber se a pessoa se encontra mais irrequieta (muito tempo a espera)
+   --usar sensores para deteçao de batimentos cardiacos para confirmar essas alteraçoes de conforto
+     (com esses resultados podemos enviar uma mensagem de alerta para o responsável da sala de espera)
+   -- etc
+
+3) Identificação de objetos ->
+   --Criar um "Google Lens Lite" onde basicamente podemos apontar a camara para um objeto
+     e obtemos mais informaçoes relativas a ele vindas da internet.(image reverse search engine)
+     --exemplo-- [apontar para um cao e detetar a raça]
+		 [idade maxima]
+ 	 	 [altura media]
+ 		 [peso medio]
+		 etc
+   --Criar um cenário onde queremos que seja interdita a utilização de algum tipo de objeto e
+     mandar um alerta (de alguma maneira) quando esse objeto é detetado
+     --exemplo--[telemoveis durante testes]
+	        [telemovel durante uma sessao de estudo]
+		[etc]
+
+4) Image Segmentation ->
+   --Basicamente junta as capacidades de identificaçao e faz em tempo real a identificacao de pessoas 
+   e objetos (especificamente ex: carros, pessoas, sinais, edificios, estrada, etc..)
+
+5) Indetificação e tradução de linguagem gestual -->
+   --nota: projeto complicado e com muita pesquisa extra 

@@ -1,0 +1,16 @@
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/CMakeFiles/rebuild_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/CMakeFiles/edit_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/core/CMakeFiles/rebuild_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/core/CMakeFiles/edit_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/core/CMakeFiles/sizes.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/core/CMakeFiles/core.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/devtools/CMakeFiles/rebuild_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/devtools/CMakeFiles/edit_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/devtools/CMakeFiles/showblock.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/devtools/CMakeFiles/devtools.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/grp_src/grp_mksofs/CMakeFiles/rebuild_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/grp_src/grp_mksofs/CMakeFiles/edit_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/grp_src/grp_mksofs/CMakeFiles/grp_mksofs.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/mksofs/CMakeFiles/rebuild_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/mksofs/CMakeFiles/edit_cache.dir
+/home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/build/mksofs/CMakeFiles/mksofs.dir

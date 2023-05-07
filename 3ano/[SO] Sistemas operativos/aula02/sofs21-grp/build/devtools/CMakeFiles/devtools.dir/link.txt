@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/lib/libdevtools.a  CMakeFiles/devtools.dir/probing.cpp.o CMakeFiles/devtools.dir/binselection.cpp.o CMakeFiles/devtools.dir/blockviews.cpp.o
+/usr/bin/ranlib /home/bruno/Desktop/UA-LECI/3ano/1semestre/Sistemas_operativos/aula02/sofs21-grp/lib/libdevtools.a

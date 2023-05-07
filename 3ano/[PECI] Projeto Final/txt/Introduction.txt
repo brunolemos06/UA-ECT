@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------------------------
+Introdução
+
+Hoje em dia, na maioria dos estabelecimentos existem salas de espera, todas com o intuito de fazer com que os clientes aguardem calmamente até procederem aos serviços pelo estabelecimento respetivo. Alguns dos problemas impostos pelas salas de espera são o facto de serem aborrecidas, pouco sociais e por vezes pouco confortavéis e comodas. As atividades numa sala de espera requerem conhecimento e competência para lidar com pessoas de uma forma diferente. O nosso projeto está envolvido como solução para alguns destes problemas, descrever e delinear possíveis comportamentos de um grupo de pessoas envolvida neste meio, sala de espera, usando a tecnologia PPG.
+
+-------------------------------------------------------------------------------------------------------
+Contexto
+
+Este é um projeto final de Licenciatura que tem como foco reconhecimento e PPG aplicado a soluções de smart waiting room. O Raspberry Pi é compacto e possui todos os principais componentes e compatibilidades com Raspberries PI HQ Camera Lenses. Este projeto vai fazer uso destes equipamentos para prestar atendimento aos nossos objetivos.
+
+-------------------------------------------------------------------------------------------------------
+Motivação
+
+A motivação deste trabalho consiste na exploração de várias tecnologias para smart waiting room, como por exemplo:
+
+-Exploração de PPG:
+	As doenças cardiovasculares são uma das causas de morte principais mundiais. O PPG implementado nas salas de espera faz uma deteção de possíveis doenças de forma mais atempada para o posterior tratamento.
+	
+-Face detection:
+	Na Face detection, a câmera detecta as caras das pessoas usando inteligência artificial. Futuramente será possível também , não só deteção mas também reconhecimento facial.
+	
+- Exploração de soluções não invasivas em cenários de salas de espera:
+	De forma global o nosso projeto consiste em explorar as funcionalidades não invasivas para salas de espera inteligentes, usando os raspeberries e as respetivas cameras.
+	
+-------------------------------------------------------------------------------------------------------
+Objetivos
+
+O objetivo deste projeto consiste em criar uma 'Smart Waiting Room' que faz uso de raspberries e cameras como equipamentos para analise e recolhas de dados e também a exploração das tecnologias usadas para a implementação do tracking da sala de espera.
+
+-------------------------------------------------------------------------------------------------------
+
