@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Saira+Stencil+One&display=swap');
+
+
+.CarAd{
+    width: 98.8vw;
+    height: 85vh;
+    margin: 0;
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    bottom: 1vh;
+    padding-bottom: 1vh;
+}
+
+
+.car-name{
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-weight: normal;
+    margin: 0;
+    padding-top: 6px;
+}
+
+.car-info{
+    width: 100%;
+    padding-left: 10px;
+    font-family: 'Roboto Mono';
+    font-weight: normal;
+    height: 35%;
+    font-size: 16px;
+    line-height: 14px;
+
+}
+
+.agent-info{
+    background-color: #DDDDDD;
+    border-radius: 20px;
+    padding-left: 14px;
+    line-height: 10px;
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.144);
+}
+.car-description{
+    width: 100%;
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    padding-left: 10px;
+    line-height: 33px;
+    vertical-align: middle;
+}
+
+.carAd-image{
+    width: 100%;
+    height: 300px;
+    align-self: flex-center;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
+}
+
+.stand-image{
+    position: inherit;
+    width: 94%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
+}
+
+.firstButton{
+    position: absolute;
+width: 19.7vw;
+height: 5vh;
+top : 1.5vh;
+left: 42vw;
+justify-content: center;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 28px;
+line-height: 40px;
+display: flex;
+align-items: center;
+text-align: center;
+cursor: pointer;
+color: #640064;
+background-color: #FFFFFF;
+box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+border-radius: 30px;
+cursor: pointer;
+}
+
+.secondButton{
+    position: absolute;
+width: 19.7vw;
+height: 5vh;
+top : 1.5vh;
+left: 72vw;
+justify-content: center;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 28px;
+line-height: 40px;
+display: flex;
+align-items: center;
+text-align: center;
+cursor: pointer;
+color: #640064;
+background-color: #FFFFFF;
+box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+border-radius: 30px;
+cursor: pointer;
+}
+
+.left-container{
+    position: relative;
+    top: 8vh;
+    width: 580px;
+    height: 650px;
+    border-radius: 2rem;
+    background-color: #faefff;
+    box-shadow: 5px 5px 10px #0000001a;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0;
+}
+.middle-container{
+    position: relative;
+    top: 8vh;
+    width: 480px;
+    height: 650px;
+    border-radius: 2rem;
+    background-color: #faefff;
+    box-shadow: 5px 5px 10px #0000001a;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.right-container{
+    position: relative;
+    top: 8vh;
+    width: 480px;
+    height: 650px;
+    border-radius: 2rem;
+    background-color: #faefff;
+    box-shadow: 5px 5px 10px #0000001a;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.backButton{
+    position: absolute;
+    top: 0vh;
+    left: 2vw;
+    background:transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    color: #640064;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+.backButton:hover{
+    cursor: pointer;
+    background:transparent;
+    border: none;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.test_drive{
+    position: absolute;
+width: 20vw;
+height: 6vh;
+left: 42vw;
+top: 1vh;
+
+background: #FFFFFF;
+box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+border-radius: 30px;
+}
+
+.test_drive{
+    position: absolute;
+width: 20vw;
+height: 5.4vh;
+left: 42vw;
+top: 1vh;
+
+background: #FFFFFF;
+box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+border-radius: 30px;
+}
+
+.buy{
+        position: absolute;
+    width: 20vw;
+    height: 5.4vh;
+    left: 72vw;
+    top: 1vh;
+    
+    background: #FFFFFF;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.testh1{
+    position: absolute;
+width: 19.7vw;
+height: 4vh;
+top: -1.4vh;
+justify-content: center;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 40px;
+display: flex;
+align-items: center;
+text-align: center;
+cursor: pointer;
+color: #640064;
+/* border-style: solid; */
+}
+
+.buyh1{
+    position: absolute;
+    width: 19.7vw;
+    height: 4vh;
+    top: -1.4vh;
+    justify-content: center;
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* border-style: solid; */
+    cursor: pointer;
+    color: #640064;
+}
+
+.base{
+    position: absolute;
+width: 35vw;
+height: 50vh;
+left: 33vw;
+top: 15vh;
+
+background: #ffffff;
+border-radius: 30px;
+}
+
+.seta_test{
+    position: absolute;
+left: 1vw;
+top: 2vh;
+cursor: pointer;
+}
+
+.contactar{
+    position: absolute;
+width: 416px;
+height: 86px;
+left: 8vw;
+top:0px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 40px;
+line-height: 53px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #444444;
+}
+
+.linha2{
+    position: absolute;
+width: 548px;
+height: 0px;
+left: 7vh;
+top: 20vw;
+
+border: 1px solid #000000;
+}
+
+.linha1{
+    position: absolute;
+width: 548px;
+height: 0px;
+left: 7vh;
+top: 6vw;
+
+border: 1px solid #000000;
+}
+
+.textocomprar{
+    position: absolute;
+width: 25vw;
+height: 15vh;
+left: 3.5vw;
+top: 13vh;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+line-height: 25px;
+/* border-style: solid; */
+color: #444444;
+}
+.enviadopor{
+    position: absolute;
+    width: 25vw;
+    height: 3vh;
+    left: 3.5vw;
+    top: 32vh;
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    /* border-style: solid; */
+    color: #444444;
+
+}
+
+.email{
+    position: absolute;
+    width: 25vw;
+    height: 3vh;
+    left: 3.5vw;
+    top: 35vh;
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    /* border-style: solid; */
+    color: #444444;
+}
+.telefone{
+    position: absolute;
+    width: 25vw;
+    height: 3vh;
+    left: 3.5vw;
+    top: 38vh;
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    /* border-style: solid; */
+    color: #444444;
+}
+
+.enviar{
+    position: absolute;
+width: 10vw;
+height: 5vh;
+left: 24vw;
+top: 43vh;
+text-align: center;
+
+background: #F6F6F6;
+box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+border-radius: 30px;
+cursor: pointer;
+}
+
+.enviartxt{
+    position: absolute;
+    width: 195px;
+    height: 46px;
+    left: 0px;
+    top: 1vh;
+    text-align: center;
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    /* border-style: solid; */
+    color: #444444;
+}
+
+.maisinfo{
+    position: absolute;
+width: 405px;
+height: 32px;
+left: 3.5vw;
+top: 9vh;
+/* border-style: solid; */
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+
+color: rgba(100, 100, 100, 0.4);
+}

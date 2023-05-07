@@ -1,0 +1,230 @@
+.MR_btn{
+    position: absolute;
+    width: 10%;
+    padding: 18px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #4FBFB9;
+    color: rgb(255, 255, 255);
+    border-radius: 2vh;
+    margin-top:  -10vh;
+    right: 5.3vh;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 10px #00000025;
+}
+
+.MR_btn:hover{
+    background-color: #287c78;
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.Review_page_container_left{
+    position: absolute;
+    width: 78vw;
+    height: 680px;
+    left: -120px;
+    top: 190px;
+    padding-left: 2vw;
+
+    background-color: #DDDDDD;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.title{
+    color: #444444;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.components{
+    position: relative;
+    margin-left : 200px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 42px;
+    /* components display vertically */
+}
+/* --------------------------------------------------- */
+.MR_form__field1 {
+    font-family: inherit;
+    width: 30%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    color: #000;
+}
+.MR_form__field1:required:valid ~ .MR_form__label1 {
+    left: -34%;
+}
+.MR_form__label1 {
+    position: relative;
+    top:  0;
+    left: -30%;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: 444444;
+    font-weight: 300;
+}
+.MR_form__field1:focus ~ .MR_form__label1{
+    left: -34%;
+    transition: 0.5s;
+    margin-bottom: green;
+}
+.MR_form__field1:focus {
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+.MR_form__field1:required, .MR_form__field1:invalid {
+    box-shadow: none;
+}
+
+/* ------------------------------DIVIDE 2 */
+.MR_form__field2:focus {
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+.MR_form__field2 {
+    font-family: inherit;
+    width: 30%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    color: #000;
+}
+.MR_form__field2:required:valid ~ .MR_form__label2 {
+    left: -34%;
+}
+.MR_form__label2 {
+    position: relative;
+    top:  0;
+    left: -30%;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: 444444;
+    font-weight: 300;
+}
+.MR_form__field2:focus ~ .MR_form__label2{
+    left: -34%;
+    transition: 0.5s;
+}
+.MR_form__field2:required, .MR_form__field2:invalid {
+    box-shadow: none;
+}
+
+/* ------------------------------DIVIDE 3 */
+.MR_form__field3 {
+    font-family: inherit;
+    width: 30%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    color: #000;
+    text-decoration: none;
+    top:  0;
+    left: -30%;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #444444;
+    font-weight: 300;
+}
+.MR_form__field3:required:valid ~ .MR_form__label3 {
+    left: -34%;
+}
+.MR_form__label3 {
+    position: relative;
+    top:  0;
+    left: -30%;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #444444;
+    font-weight: 300;
+}
+.MR_form__field3:focus ~ .MR_form__label3{
+    left: -34%;
+    transition: 0.5s;
+    margin-bottom: green;
+}
+.MR_form__field3:focus {
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+.MR_form__field3:required, .MR_form__field3:invalid {
+    box-shadow: none;
+}
+
+/* ------------------------------DIVIDE 4 */
+.MR_form__field4 {
+    font-family: inherit;
+    width: 30%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    color: #000;
+    color: #000;
+    resize: none;
+}
+.MR_form__field4:required:valid ~ .MR_form__label4 {
+    left: -36%;
+    top : -135px;
+}
+.MR_form__label4 {
+    position: relative;
+    top:  -1vh;
+    left: -30%;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #444444;
+    font-weight: 300;
+}
+.MR_form__field4:focus ~ .MR_form__label4{
+    left: -36%;
+    transition: 0.5s;
+    top:-135px;
+    margin-bottom: green;
+}
+.MR_form__field4:focus {
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+.MR_form__field4:required, .MR_form__field4:invalid {
+    box-shadow: none;
+}

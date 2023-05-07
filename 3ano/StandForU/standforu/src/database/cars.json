@@ -1,0 +1,18 @@
+{
+"1":    {"marca": "Porshe" ,"modelo":"Panamera", "ano": "2022" , "preco": "125 000" , "kms" : "129 400", "imagem" : "porshe-panamera-2022.jpg","imagem2": "porshe-panamera-2022-2.jpg"},
+"2":    {"marca": "Audi","modelo":"A1","ano": "2019","preco": "35 000" , "kms" : "15 100", "imagem" : "audi-a1-2019.jpg" , "imagem2": "audi-a1-2019-2.jpg"},
+"3":    {"marca": "Mercedes" , "modelo":"GLS","ano": "2021" , "preco": "85 000" , "kms" : "67 000", "imagem" : "mercedes-gls-2021.jpg", "imagem2": "mercedes-gls-2021-2.jpg"},
+"4":    {"marca": "Nissan" , "modelo":"Qashqai","ano": "2006" , "preco": "16 000" , "kms" : "180 000", "imagem" : "nissan-qashqai-2006.jpg", "imagem2": "nissan-qashqai-2006-2.jpg"},
+"5":    {"marca": "Volvo" , "modelo":"XC40","ano": "2020" , "preco": "40 000" , "kms" : "46 000", "imagem" : "volvo-xc40-2020.jpg", "imagem2": "volvo-xc40-2020-2.jpg"},
+"6":    {"marca": "Toyota" , "modelo":"Prius","ano": "2012" , "preco": "18 000" , "kms" : "210 000", "imagem" : "toyota-prius-2012.jpg", "imagem2": "toyota-prius-2012-2.jpg"},
+"7":    {"marca": "Honda" ,"modelo":"Civic", "ano": "2001" , "preco": "3 000" , "kms" : "312 900", "imagem" : "honda-civic-2001.jpg", "imagem2": "honda-civic-2001-2.jpg"},
+"8":    {"marca": "Ford" ,"modelo":"Focus ST", "ano": "2009" , "preco": "16 000" , "kms" : "202 800", "imagem" : "ford-focus-2009.jpg", "imagem2": "ford-focus-2009-2.jpg"},
+"9":    {"marca": "Mazda" , "modelo":"CX-5","ano": "2015" , "preco": "21 000" , "kms" : "73 900", "imagem" : "mazda-cx-5-2015.jpg", "imagem2": "mazda-cx-5-2015-2.jpg"},
+"10":    {"marca": "Kia" , "modelo":"Rio","ano": "2021" , "preco": "20 000" , "kms" : "104 000", "imagem" : "kia-rio-2021.jpg", "imagem2": "kia-rio-2021-2.jpg"},
+"11":    {"marca": "Subaru" ,"modelo":"Impreza", "ano": "2013" , "preco": "52 000" , "kms" : "102 100", "imagem" : "subaru-impreza-2013.jpg", "imagem2": "subaru-impreza-2013-2.jpg"},
+"12":    {"marca": "Jeep" , "modelo":"Wrangler","ano": "2006" , "preco": "45 000" , "kms" : "88 200", "imagem" : "jeep-wrangler-2006.jpg", "imagem2": "jeep-wrangler-2006-2.jpg"},
+"13":    {"marca": "Mitsubishi" , "modelo":"Outlander","ano": "2015" , "preco": "14 000" , "kms" : "273 400", "imagem" : "mitsubishi-outlander-2015.jpg", "imagem2": "mitsubishi-outlander-2015-2.jpg"},
+"14":    {"marca": "Ford" , "modelo":"Fusion","ano": "2017" , "preco": "20 000" , "kms" : "121 500", "imagem" : "ford-fusion-2017.jpg", "imagem2": "ford-fusion-2017-2.jpg"},
+"15":    {"marca": "Dodge" ,"modelo":"Challenger", "ano": "2018" , "preco": "80 000" , "kms" : "29 400", "imagem" : "dodge-challenger-2018.jpg", "imagem2": "dodge-challenger-2018-2.jpg"},
+"16":    {"marca": "Bmw" , "modelo":"X5","ano": "2010" , "preco": "25 000" , "kms" : "290 800", "imagem" : "bmw-x5-2010.jpg", "imagem2": "bmw-x5-2010-2.jpg"}
+}

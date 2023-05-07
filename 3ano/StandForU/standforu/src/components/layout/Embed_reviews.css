@@ -1,0 +1,52 @@
+.text{
+    /* tiny text */
+    font-size: 1rem;
+    color: #666;
+    padding: 1em;
+}
+.trash2{
+    color:black;
+    position: relative;
+    top: 0vh;
+    left: 53vh;
+    width: 2vh;
+    height: 2vh;
+    cursor: pointer;
+}
+
+.review-icon{
+    height: fit-content;
+    /* border-color: black;
+    border-style: 1px solid;
+    border-style: solid; */
+    text-align: center;
+    margin: 0;
+}
+
+.undo-btn{
+    border-radius: 10px;
+    border-width: 0;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.082);
+    background-color: #bdbdbd;
+    margin-left: 6px;
+}
+
+.embed{
+    display: grid;
+    grid-template-columns: 4fr 8fr 1fr;
+    align-items: center;
+}
+
+.fotocar{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.divheart{
+    margin:0;
+    margin-top: 0;
+}

@@ -1,0 +1,84 @@
+.loginpage{
+    text-decoration: none;
+}
+.btn_login{
+    position: relative;
+
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+.btn_register{
+    position: relative;
+    text-decoration: none;
+    padding-left: 7.5vh;
+    padding-right: 6vh;
+    
+}
+
+.left-login{
+    position: absolute;
+    left: 10vw;
+
+}
+.centered-login{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    left: 10vh;
+}
+.buysell{
+    margin-left: 10%;
+}
+
+h1{
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #444444;
+}
+.label_btn{
+    /* position elements horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* put an space between the elements in this div */
+    margin: 10vh 0;
+
+}
+.btn_login_div{
+    width: 40%;
+    padding: 8px 2px;
+    margin-right: 10%;
+    background-color: #4FBFB9;
+    border-radius:  20px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.btn_login_div:hover{
+    background-color: #28615e;
+    cursor: pointer;
+}
+
+.btn_register_div{
+    width: 40%;
+    padding: 8px 2px;
+    margin-left: 10%;
+    background-color: #4FBFB9;
+    border-radius:  20px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    
+}
+.btn_register_div:hover{
+    background-color: #28615e;
+    cursor: pointer;
+}

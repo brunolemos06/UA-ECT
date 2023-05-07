@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Saira+Stencil+One&display=swap');
+
+.Home{
+    width: auto;
+    height: 100vh;
+    background-color: #ebebeb;
+}
+
+.divider{
+    background-color: #640064;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 22.6vh;
+    box-shadow: 0px 14px 34px #ebebeb33, 0px 16px 30px #ebebebad;
+    z-index: 1;
+}
+
+.cars{
+    position: absolute;
+    width: 91.6%;
+    height: 72.8vh;
+    top:23vh;
+    padding: 80px;
+    padding-top: 4vh;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 5rem;
+    grid-row-gap: 3rem;
+    justify-items: center;
+    overflow-y: auto;
+
+}
+.cars::-webkit-scrollbar {
+    display: none;
+}
+.car{
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.car:hover{
+    cursor: pointer;
+    /* transform scale (1.05) in 0.5 seconds */
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
+}
+
+.selects{
+    display: inline-flex;
+    padding-left: 7vw;
+}
+
+.selectYear{
+    position:absolute;
+    top:15vh;
+    position: fixed;
+    width: 130px;
+    z-index: 2;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+.selectPrice{
+    position:relative;
+    top:15vh;
+    position: fixed;
+    width: 130px;
+    z-index: 2;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 90px;
+}
+
+.selectKms{
+    position:relative;
+    top:15vh;
+    position: fixed;
+    width: 130px;
+    z-index: 2;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.searchInput{
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    width: 30vw;
+    height: 60px;
+    padding-left: 20px;
+    background:transparent;
+    border: 0;
+    font-size: 30px;
+    position:absolute;
+    top:14vh;
+    left: 61vw;
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+    color:#646464;
+    position: fixed;
+}
+
+.searchInput:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
+    outline: none;
+    color:#646464;
+}
+
+.searchInput:focus{
+    outline: none;
+    color:#646464;
+}
+.Comments{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:1em;
+    margin-top: 24vh;
+    margin-left:6%;
+    margin-right:6%;
+  }
+  
+  .Comments > div{
+    background: #bdbdbd;
+    padding: 1em;
+    margin-top: 24px;
+    border-radius: 2vh;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
+  }
+  
+  .Comments > div:nth-child(odd){
+    background: #dddddd;
+  }
+
+.tabs{
+    display: flex;
+    position: absolute;
+    position:absolute;
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    font-size: 1.4rem;
+    
+    top:14vh;
+    left: 6.5vw;
+    width:fit-content;
+    border-radius: 2vh;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
+    background-color: #ffffff;
+    
+}
+
+.activeCars{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+.activeCars:hover{
+    cursor: pointer;
+    transform: scale(1.06);
+    transition: all 0.3s ease-in-out;
+}
+  .activeReviews{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.activeReviews:hover{
+    cursor: pointer;
+    transform: scale(1.06);
+    transition: all 0.3s ease-in-out;
+}

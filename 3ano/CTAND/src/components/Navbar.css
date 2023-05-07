@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Saira+Stencil+One&display=swap');
+
+.navbar-div{
+    width: 100vw;
+    height: 14vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+}
+
+.ctand{
+    position: absolute;
+    width: 419px;
+    height: 144px;
+    left: 7vw;
+    top: 2vh;
+
+    font-family: 'Saira Stencil One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 126px;
+    text-decoration: none;
+
+    color: #640064;
+}
+
+.buyacar{
+    transition: 0.5s;
+    position: relative;
+    width: 283.64px;
+    height: 84px;
+    left: 15vh;
+
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    color: #ffffff;
+}
+
+.buyacar:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+.sellacar{
+    position: relative;
+    width: 283.64px;
+    height: 84px;
+    left: 24vh;
+
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    text-decoration: none;
+
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.sellacar:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
+.icon{
+    position: relative;
+    width: 283.64px;
+    height: 84px;
+    left: 35vh; 
+    
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    text-decoration: none;
+
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    transition: 0.5s;
+    transform: scale(1.03);
+}
+
+.nav-links{
+    position: absolute;
+    width: 60vw;
+    height: fit-content;
+    right: 0;
+    top: 3.5vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background: #640064;
+    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1); */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    overflow: hidden;
+}

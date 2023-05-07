@@ -1,0 +1,5 @@
+{
+"1":    {"marca": "Audi","modelo":"A1","ano": "2019","preco": 35000 , "kms" : 15100, "imagem" : "audi-a1-2019.jpg"},
+"2":    {"marca": "Volvo" , "modelo":"XC40","ano": "2020" , "preco": 40000 , "kms" : 46000, "imagem" : "volvo-xc40-2020.jpg"},
+"3":    {"marca": "Mercedes" , "modelo":"GLS","ano": "2021" , "preco": 85000 , "kms" : 67000, "imagem" : "mercedes-gls-2021.jpg"}
+}

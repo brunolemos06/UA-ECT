@@ -1,0 +1,261 @@
+
+
+/* .profilepage{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+} */
+
+.profile{
+    position: relative;
+    width: 24vw;
+    height: 73vh;
+    left: 20vw;
+    top: 20vh;
+   
+
+    background: #faefff;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    margin: 0;
+}
+
+.mycars{
+    position: absolute;
+    width: 25vw;
+    height: 73vh;
+    left: 55vw;
+    top: 20vh;
+
+    background: #faefff;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    margin: 0;
+
+}
+
+.nocars{
+    position:relative;
+    top: 20vh;
+}
+
+.dados1{
+    position: absolute;
+    width: 359px;
+    right: 3vw;
+    top: 300px;
+
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #000000;
+    margin:0;
+}
+
+.dados2{
+    position: absolute;
+    width: 359px;
+    right: 3vw;
+    top: 360px;
+
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.dados3{
+    position: absolute;
+width: 359px;
+right: 3vw;
+top: 420px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.dados4{
+    position: absolute;
+width: 359px;
+right: 3vw;
+top: 480px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.dados5{
+    position: absolute;
+width: 359px;
+right: 3vw;
+top: 540px;
+
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 19px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+
+.myselcars{
+justify-content: center;
+align-items: center;
+padding-top: 0vh;
+padding-left: 5vw;
+padding-right: 5vw;
+font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 300;
+font-size: 1.5vw;
+/* line-height: 53px; */
+display: flex;
+text-align: center;
+
+color: #444444;
+}
+
+
+
+.my1car{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin:auto;
+    justify-content: center;
+    top: 2vh;
+    width: 23vw;
+    height: 25vh;
+
+    background: #F7F7F7;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.car1{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding-bottom: 2vh;
+    margin-top: 16px;
+    border-radius: 20px;
+}
+
+.my2car{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin:auto;
+    justify-content: center;
+    top: 5vh;
+    width: 23vw;
+    height: 25vh;
+
+    background: #F7F7F7;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+.car2{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding-bottom: 4vh;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    }
+
+.imageprofcar{
+    /* position: relative;
+    align-items: center; */
+    /* display: block;
+    margin-right: 30%; */
+    /* top: 10px; */
+    /* padding-left: 0px;
+    padding-right: 0px; */
+    width: 18vw;
+    height: 18vh;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
+}
+
+
+
+.fotoperfil{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: 7vw;
+        top: 7vh;
+}
+
+.logout-button{
+    position:absolute;  
+    width: 7%;
+    left:35.5vw;
+    top:22vh;
+    color: white;
+    background-color: #640064;
+    border-radius: 14px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.211);
+    padding: 10px 20px;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+.logout-button:hover{
+    transform:scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.carprof{
+    position: absolute;
+    width: 55%;
+    height: 50vh;
+    top:10vh;
+    padding: 80px;
+    padding-top: 4vh;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    justify-items: center;
+    overflow-x: hidden;
+    overflow-y: unset;
+    margin-left:6%;
+    margin-right:6%;
+    
+    /* border-style: solid; */
+}

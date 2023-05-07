@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,300|Saira+Stencil+One:400");
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.carDiv {
+  align-items: center;
+  background-color: var(--black-haze);
+  border-radius: 36px;
+  box-shadow: 5px 5px 10px #0000001a;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 275px;
+}
+
+.cardiv-image {
+  align-self: flex-center;
+  height: 166px;
+  object-fit: cover;
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.411);
+}
+
+.info {
+  margin-right: 1px;
+  margin-top: 8px;
+  min-height: 79px;
+  text-align: center;
+  width: 248px;
+  color: var(--storm-dust);
+  font-weight: lighter;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.extra {
+    left: 0;
+    letter-spacing: 0;
+    position: absolute;
+    text-align: center;
+    top:-6px;
+    width: 248px;
+    font-weight: lighter;
+    font-size: 20px;
+    padding-bottom: 8px;
+    color: var(--storm-dust);
+  }
+
+.overlap-group {
+  height: 37px;
+  margin-right: 1px;
+  margin-top: 20px;
+  position: relative;
+  width: 248px;
+}
+
+.rectangle-10 {
+  background-color: var(--mist-gray);
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px #00000026;
+  height: 36px;
+  position: absolute;
+  width: 248px;
+  margin:0;
+  top:-10px;
+}
+
+
+
+
+/* extra */
+
+:root {
+    --black: 
+  rgba(0, 0, 0, 1);
+    --heavy-metal: 
+  rgba(43, 43, 42, 1);
+    --fountain-blue-2: 
+  rgba(79, 191, 184, 1);
+    --fountain-blue: 
+  rgba(79, 191, 185, 1);
+    --storm-dust: 
+  rgba(99, 99, 99, 1);
+    --silver: 
+  rgba(188, 188, 188, 1);
+    --mist-gray: 
+  rgba(196, 196, 196, 1);
+    --cararra: 
+  rgba(235, 235, 235, 1);
+    --black-haze: 
+  rgba(246, 246, 246, 1);
+    --white2: 
+  rgba(255, 255, 255, 0.2);
+    --white: 
+  rgba(255, 255, 255, 1);
+  
+    --font-size-xs: 18px;
+    --font-size-s: 19px;
+    --font-size-m: 20px;
+    --font-size-l: 32px;
+    --font-size-xl: 35px;
+    --font-size-xl: 48px;
+    --font-size-xxl: 36px;
+    --font-size-xxxl: 80px;
+  
+    --font-family-roboto_mono: "Roboto Mono";
+    --font-family-roboto_mono-light: "Roboto Mono-Light";
+    --font-family-saira_stencil_one: "Saira Stencil One";
+  }
+  
+  
+  
+  .sairastencilone-normal-fountain-blue-80px {
+    color: var(--fountain-blue-2);
+    font-family: var(--font-family-saira_stencil_one);
+    font-size: var(--font-size-xxxl);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .robotomono-normal-black-18px {
+    color: var(--black);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .robotomono-light-black-19px {
+    color: var(--black);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-s);
+    font-weight: 300;
+    font-style: normal;
+  }
+  .robotomono-normal-black-19px {
+    color: var(--black);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .robotomono-light-black-18px {
+    color: var(--black);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-xs);
+    font-weight: 300;
+    font-style: normal;
+  }
+  .robotomono-light-black-20px {
+    color: var(--black);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-m);
+    font-weight: 300;
+    font-style: normal;
+  }
+  .robotomono-light-storm-dust-18px {
+    color: var(--storm-dust);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-xs);
+    font-weight: 300;
+    font-style: normal;
+  }
+  .robotomono-normal-black-20px {
+    color: var(--black);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .robotomono-light-white-36px {
+    color: var(--white);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-xxl);
+    font-weight: 300;
+    font-style: normal;
+  }
+  .robotomono-normal-silver-36px {
+    color: var(--silver);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-xxl);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .robotomono-normal-fountain-blue-36px {
+    color: var(--fountain-blue);
+    font-family: var(--font-family-roboto_mono);
+    font-size: var(--font-size-xxl);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .caixote{
+    position: absolute;
+    left: 26vh;
+    top: 10vw;
+  }
+  .editar{
+    position: absolute;
+    left: 26vh;
+    top: 11.5vw;
+  }
