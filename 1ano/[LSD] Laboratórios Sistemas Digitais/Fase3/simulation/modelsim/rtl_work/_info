@@ -1,0 +1,466 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Uni/Projeto_LSD/Final3 FINAL/simulation/modelsim
+Ealu
+Z1 w1590337810
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Uni/Projeto_LSD/Final3 FINAL/ALU.vhd
+Z6 FC:/Uni/Projeto_LSD/Final3 FINAL/ALU.vhd
+l0
+L5
+V`NVlkZWRDiC4??0^nOCNh3
+!s100 `c;XInjPh2f1UE0:FmNmh3
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1590863651
+!i10b 1
+Z9 !s108 1590863651.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/ALU.vhd|
+Z11 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/ALU.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 3 alu 0 22 `NVlkZWRDiC4??0^nOCNh3
+l17
+L14
+V]gdfe406W]=H:;fjf^Zf53
+!s100 MS=0Nag<]SjAM3NP3DYKS2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtrolunit
+Z15 w1590854994
+R2
+R3
+R4
+R0
+Z16 8C:/Uni/Projeto_LSD/Final3 FINAL/ControlUnit.vhd
+Z17 FC:/Uni/Projeto_LSD/Final3 FINAL/ControlUnit.vhd
+l0
+L5
+VmFPCkYYOJh1bcPS^ze=IM0
+!s100 OWM0>n]gS5S>ML?[IkY;L1
+R7
+31
+R8
+!i10b 1
+Z18 !s108 1590863650.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/ControlUnit.vhd|
+Z20 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/ControlUnit.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z21 DEx4 work 11 controlunit 0 22 mFPCkYYOJh1bcPS^ze=IM0
+l29
+L25
+VVWNB1j2O7mI`jdIXWM`@W1
+!s100 VN[hP@OBeb5bF3`DS04Cj2
+R7
+31
+R8
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Edatapath
+Z22 w1590609118
+R2
+R3
+R4
+R0
+Z23 8C:/Uni/Projeto_LSD/Final3 FINAL/Datapath.vhd
+Z24 FC:/Uni/Projeto_LSD/Final3 FINAL/Datapath.vhd
+l0
+L5
+V0O2_6ioW]hZ5@L^Zh06ed1
+!s100 Rj?2KL5L1i;Mf_4II1nUF2
+R7
+31
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/Datapath.vhd|
+Z26 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/Datapath.vhd|
+!i113 1
+R12
+R13
+Astructural
+Z27 DEx4 work 7 dmemory 0 22 [9:V?KLHHPU8^?`BU0`>K0
+R14
+Z28 DEx4 work 10 signextend 0 22 7=<VTP58J>8N2lF29Eo?]2
+Z29 DEx4 work 9 registers 0 22 P6]Zd^@eP6N51I4_hgPa@2
+Z30 DEx4 work 7 pmux2_1 0 22 nU=CXB0303YflijSicHDU1
+Z31 DEx4 work 7 imemory 0 22 6;`9C2FflnZSkjRK1MfIL2
+Z32 DEx4 work 2 pc 0 22 MBaK=RYoUfRUA7Xb<BA<43
+R2
+R3
+R4
+Z33 DEx4 work 8 datapath 0 22 0O2_6ioW]hZ5@L^Zh06ed1
+l35
+L22
+VCFSM`7l6P51D@0E^IlI^Q1
+!s100 R>UJj5fm1m4NQV8G?<jDS2
+R7
+31
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Edmemory
+Z34 w1590258136
+R2
+R3
+R4
+R0
+Z35 8C:/Uni/Projeto_LSD/Final3 FINAL/DMemory.vhd
+Z36 FC:/Uni/Projeto_LSD/Final3 FINAL/DMemory.vhd
+l0
+L5
+V[9:V?KLHHPU8^?`BU0`>K0
+!s100 fA3E?`5gLDZBMCoQXS@^U1
+R7
+31
+R8
+!i10b 1
+R9
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/DMemory.vhd|
+Z38 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/DMemory.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R27
+l21
+L14
+Veb9[OVk[[1j:kGNVV8fNj1
+!s100 J[@oj54;40APTjaI7VWXU0
+R7
+31
+R8
+!i10b 1
+R9
+R37
+R38
+!i113 1
+R12
+R13
+Eimemory
+Z39 w1590340879
+R2
+R3
+R4
+R0
+Z40 8C:/Uni/Projeto_LSD/Final3 FINAL/IMemory.vhd
+Z41 FC:/Uni/Projeto_LSD/Final3 FINAL/IMemory.vhd
+l0
+L5
+V6;`9C2FflnZSkjRK1MfIL2
+!s100 ]h9WFF9g^Pn5`0K;zgcFf1
+R7
+31
+R8
+!i10b 1
+R9
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/IMemory.vhd|
+Z43 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/IMemory.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R31
+l26
+L13
+VXSGWUDUWIE=lo75i5>=E53
+!s100 14dURE;:kF`?BPn^MVcB[3
+R7
+31
+R8
+!i10b 1
+R9
+R42
+R43
+!i113 1
+R12
+R13
+Epc
+Z44 w1590359519
+R2
+R3
+R4
+R0
+Z45 8C:/Uni/Projeto_LSD/Final3 FINAL/PC.vhd
+Z46 FC:/Uni/Projeto_LSD/Final3 FINAL/PC.vhd
+l0
+L5
+VMBaK=RYoUfRUA7Xb<BA<43
+!s100 lD;a;EG<0eoCLoONd1iTW2
+R7
+31
+R8
+!i10b 1
+R9
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/PC.vhd|
+Z48 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/PC.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R32
+l16
+L14
+VbXWm=@D:R^E2C3D>G>=LZ3
+!s100 C@=0lOI:Li:ZXW]K:h<aY2
+R7
+31
+R8
+!i10b 1
+R9
+R47
+R48
+!i113 1
+R12
+R13
+Epmux2_1
+Z49 w1589735022
+R3
+R4
+R0
+Z50 8C:/Uni/Projeto_LSD/Final3 FINAL/pMux2_1.vhd
+Z51 FC:/Uni/Projeto_LSD/Final3 FINAL/pMux2_1.vhd
+l0
+L3
+VnU=CXB0303YflijSicHDU1
+!s100 0U:hTm7DzE>c;Cz[70_e:0
+R7
+31
+R8
+!i10b 1
+R9
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/pMux2_1.vhd|
+Z53 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/pMux2_1.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R30
+l12
+L11
+V@o^K=GAniZ>4R]H^ccM7F2
+!s100 Qgnda_X48bNJj8PJFdfMh1
+R7
+31
+R8
+!i10b 1
+R9
+R52
+R53
+!i113 1
+R12
+R13
+Eprocessadorcompleto
+Z54 w1590863479
+R2
+R3
+R4
+R0
+Z55 8C:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto.vhd
+Z56 FC:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto.vhd
+l0
+L5
+VXOHS:JHkdRNV6Mz:fEfPW3
+!s100 Ez]HizcVnX;Nczol]F^>>1
+R7
+31
+R8
+!i10b 1
+R9
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto.vhd|
+Z58 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto.vhd|
+!i113 1
+R12
+R13
+Astructural
+R21
+R33
+R2
+R3
+R4
+Z59 DEx4 work 19 processadorcompleto 0 22 XOHS:JHkdRNV6Mz:fEfPW3
+l25
+L12
+VeN<LX2TLV[6jX;0gPcSF]3
+!s100 E<HA=UZY@f6QoLB3Qb8b=1
+R7
+31
+R8
+!i10b 1
+R9
+R57
+R58
+!i113 1
+R12
+R13
+Eprocessadorcompleto_tb
+Z60 w1590863621
+R3
+R4
+R0
+Z61 8C:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto_tb.vhd
+Z62 FC:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto_tb.vhd
+l0
+L4
+VzWz:;^kP=z5InRIb:_Vbn2
+!s100 Rl^QBLXEFK7M^;zB3jiDi1
+R7
+32
+Z63 !s110 1590863672
+!i10b 1
+Z64 !s108 1590863672.000000
+Z65 !s90 -reportprogress|300|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto_tb.vhd|
+Z66 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/ProcessadorCompleto_tb.vhd|
+!i113 1
+Z67 o-work work
+R13
+Astimulus
+R2
+R59
+R3
+R4
+DEx4 work 22 processadorcompleto_tb 0 22 zWz:;^kP=z5InRIb:_Vbn2
+l13
+L6
+V0[=TXP=0YVc]f2?BEk2a02
+!s100 7BJeckGfJd<ceQ>A`YRH_1
+R7
+32
+R63
+!i10b 1
+R64
+R65
+R66
+!i113 1
+R67
+R13
+Eregisters
+Z68 w1590260775
+R2
+R3
+R4
+R0
+Z69 8C:/Uni/Projeto_LSD/Final3 FINAL/Registers.vhd
+Z70 FC:/Uni/Projeto_LSD/Final3 FINAL/Registers.vhd
+l0
+L5
+VP6]Zd^@eP6N51I4_hgPa@2
+!s100 NYNAzjM;?_POGX[I?j7f_0
+R7
+31
+R8
+!i10b 1
+R9
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/Registers.vhd|
+Z72 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/Registers.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R29
+l25
+L18
+VR[BRk`UL:3^Y6<46fIf<e0
+!s100 Obgd:CAEHb38d5;mX1>8S1
+R7
+31
+R8
+!i10b 1
+R9
+R71
+R72
+!i113 1
+R12
+R13
+Esignextend
+Z73 w1590255795
+R3
+R4
+R0
+Z74 8C:/Uni/Projeto_LSD/Final3 FINAL/SignExtend.vhd
+Z75 FC:/Uni/Projeto_LSD/Final3 FINAL/SignExtend.vhd
+l0
+L4
+V7=<VTP58J>8N2lF29Eo?]2
+!s100 M[kC[5QknUUL3@Lh_z5<P1
+R7
+31
+R8
+!i10b 1
+R9
+Z76 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Final3 FINAL/SignExtend.vhd|
+Z77 !s107 C:/Uni/Projeto_LSD/Final3 FINAL/SignExtend.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R28
+l10
+L9
+VXbOk_ng>m<;cSleGPe9Kj1
+!s100 `9`4k;zVSXTgFz6eIzSE@3
+R7
+31
+R8
+!i10b 1
+R9
+R76
+R77
+!i113 1
+R12
+R13

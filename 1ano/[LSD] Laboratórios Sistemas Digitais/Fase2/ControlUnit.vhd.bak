@@ -1,0 +1,148 @@
+Library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity ControlUnit is
+
+port( 
+		clk      : in std_logic;
+		reset    : in std_logic;
+		opcode   : in std_logic_vector(2 downto 0);
+		func     : in std_logic_vector(3 downto 0);
+		EnPc     : out std_logic;
+		RI       : out std_logic;
+		RegWr    : out std_logic;
+		RegDst   : out std_logic;
+		ALUSrc   : out std_logic;
+		ALUOp    : out std_logic_vector(3 downto 0);
+		MemWr    : out std_logic;
+		MemtoReg : out std_logic));
+		
+end ControlUnit;
+
+
+
+architecture Behavioral of ControlUnit is
+	type t_state is (RESET,FETCH_0,FETCH_1,DECODE,EXECUTE,REG_UPDATE,WRITE_MEM);
+	signal state,next_state : t_state;
+	
+begin
+
+	sync_proc : process (clk);
+	begin	
+		if(rising_edge(clk)) then
+			if(reset ='1') then
+				state <= RESET;
+			else
+				state <= next_state;
+			end if;
+		end if;
+	end process;
+	
+
+	control_proc :	process(clk)
+	begin
+		if(falling_edge(clk)) then
+		
+			case state is
+				
+				when RESET =>                --reset
+					EnPc     <= '0';    
+					RI       <= '0'; 
+					RegWr    <= '0'; 
+					RegDst   <= '0';  
+					ALUSrc   <= '0'; 
+					ALUOp    <= "0000"; 
+					MemWr    <= '0';
+					MemtoReg <= '0';
+					next_state <= FETCH0:
+			
+				when FETCH_0 =>              --fetch0
+					EnPc     <= '0';    
+					RI       <= '1'; 
+					RegWr    <= '0'; 
+					RegDst   <= '0';  
+					ALUSrc   <= '0'; 
+					ALUOp    <= "0000"; 
+					MemWr    <= '0';
+					MemtoReg <= '0';								
+					next_state <= FETCH1;
+						
+				when FETCH_1 =>              --fetch1
+					EnPc     <= '1';    
+					RI       <= '0'; 
+					next_state <= DECODE;
+					
+				when DECODE =>             -- decode
+				
+					if(opcode = "000") then
+						EnPc     <= '0';    
+						RI       <= '0'; 
+						RegWr    <= '0'; 
+						RegDst   <= '0';  
+						ALUSrc   <= '0'; 
+						ALUOp    <= "0000"; 
+						MemWr    <= '0';
+						MemtoReg <= '0';													
+						next_state      <=  FETCH0 ;
+						
+					elsif(opcode = "001") then
+						EnPc     <= '0';    
+						RI       <= '0'; 
+						RegWr    <= '0'; 
+						RegDst   <= '0';  
+						ALUSrc   <= '0'; 
+						ALUOp    <= s_func; 
+						MemWr    <= '0';
+						MemtoReg <= '0';														
+						next_state      <=  REG_UPDATE ;
+						
+					elsif(opcode = "110") then
+						EnPc     <= '0';    
+						RI       <= '0'; 
+						RegWr    <= '0'; 
+						RegDst   <= '1';  
+						ALUSrc   <= '1'; 
+						ALUOp    <= "0000"; 
+						MemWr    <= '0';
+						MemtoReg <= '0';														
+						next_state      <=  WRITE_MEM ;
+					
+					elsif(opcode = "111") then
+						EnPc     <= '0';    
+						RI       <= '0'; 
+						RegWr    <= '0'; 
+						RegDst   <= '1';  
+						ALUSrc   <= '1'; 
+						ALUOp    <= "0000"; 
+						MemWr    <= '0';
+						MemtoReg <= '1';														
+						next_state      <=  REG_UPDATE;
+					else
+						EnPc     <= '0';    
+						RI       <= '0'; 
+						RegWr    <= '0'; 
+						RegDst   <= '0';  
+						ALUSrc   <= '0'; 
+						ALUOp    <= "0000"; 
+						MemWr    <= '0';
+						MemtoReg <= '0';
+						next_state      <=  FETCH_0 ;						
+					end if;
+				
+				when WRITE_MEM =>         -- memory update
+					MemWr <= '1';
+					next_state   <=  FETCH_0 ;
+					
+				when REG_UPDATE =>         -- reg update
+					 RegWr <= '1';
+					 next_state   <=  FETCH_0 ;
+					 
+				when others =>				
+					next_state <= RESET;
+			end case;
+		end if;		
+	end process;
+			
+
+end Behavioral;

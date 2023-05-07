@@ -1,0 +1,22 @@
+
+State Machine - |ProcessadorCompleto|ControlUnit:F_ControlUnit|next_state
+Name next_state.PC_BRANCH next_state.WRITE_MEM next_state.REG_UPDATE next_state.EXECUTE next_state.DECODE next_state.FETCH1 next_state.FETCH0 next_state.RESET 
+next_state.RESET 0 0 0 0 0 0 0 0 
+next_state.FETCH0 0 0 0 0 0 0 1 1 
+next_state.FETCH1 0 0 0 0 0 1 0 1 
+next_state.DECODE 0 0 0 0 1 0 0 1 
+next_state.EXECUTE 0 0 0 1 0 0 0 1 
+next_state.REG_UPDATE 0 0 1 0 0 0 0 1 
+next_state.WRITE_MEM 0 1 0 0 0 0 0 1 
+next_state.PC_BRANCH 1 0 0 0 0 0 0 1 
+
+State Machine - |ProcessadorCompleto|ControlUnit:F_ControlUnit|state
+Name state.PC_BRANCH state.WRITE_MEM state.REG_UPDATE state.EXECUTE state.DECODE state.FETCH1 state.FETCH0 state.RESET 
+state.RESET 0 0 0 0 0 0 0 0 
+state.FETCH0 0 0 0 0 0 0 1 1 
+state.FETCH1 0 0 0 0 0 1 0 1 
+state.DECODE 0 0 0 0 1 0 0 1 
+state.EXECUTE 0 0 0 1 0 0 0 1 
+state.REG_UPDATE 0 0 1 0 0 0 0 1 
+state.WRITE_MEM 0 1 0 0 0 0 0 1 
+state.PC_BRANCH 1 0 0 0 0 0 0 1 

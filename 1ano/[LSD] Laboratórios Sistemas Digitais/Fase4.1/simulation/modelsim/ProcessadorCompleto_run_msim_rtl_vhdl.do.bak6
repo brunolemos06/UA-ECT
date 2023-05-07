@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/pMux2_1.vhd}
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/PC.vhd}
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/SignExtend.vhd}
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/IMemory.vhd}
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/DMemory.vhd}
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/Registers.vhd}
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/ALU.vhd}
+vcom -93 -work work {C:/Uni/Projeto_LSD/Fase1/Datapath.vhd}
+

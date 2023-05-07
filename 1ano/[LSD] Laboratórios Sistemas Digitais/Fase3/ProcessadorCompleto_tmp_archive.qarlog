@@ -1,0 +1,36 @@
+Quartus Prime Archive log --	C:/Uni/Projeto_LSD/Fase1/ProcessadorCompleto_tmp_archive.qarlog
+
+Archive:	C:/Uni/Projeto_LSD/Fase1/ProcessadorCompleto_tmp_archive.qar
+Date:		Sat May 30 18:12:23 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Uni/Projeto_LSD/Fase1/ALU.vhd
+C:/Uni/Projeto_LSD/Fase1/ALU.vwf
+C:/Uni/Projeto_LSD/Fase1/DMemory.vhd
+C:/Uni/Projeto_LSD/Fase1/DMemory.vwf
+C:/Uni/Projeto_LSD/Fase1/Datapath.vhd
+C:/Uni/Projeto_LSD/Fase1/Datapath_Tb.vhd
+C:/Uni/Projeto_LSD/Fase1/IMemory.vhd
+C:/Uni/Projeto_LSD/Fase1/IMemory.vwf
+C:/Uni/Projeto_LSD/Fase1/PC.vhd
+C:/Uni/Projeto_LSD/Fase1/PC.vwf
+C:/Uni/Projeto_LSD/Fase1/ProcessadorCompleto.qpf
+C:/Uni/Projeto_LSD/Fase1/ProcessadorCompleto.qsf
+C:/Uni/Projeto_LSD/Fase1/Registers.vhd
+C:/Uni/Projeto_LSD/Fase1/Registers.vwf
+C:/Uni/Projeto_LSD/Fase1/SignExtend.vhd
+C:/Uni/Projeto_LSD/Fase1/SignExtend.vwf
+C:/Uni/Projeto_LSD/Fase1/pMux2_1.vhd
+C:/Uni/Projeto_LSD/Fase1/pMux2_1.vwf
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 19 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sat May 30 18:12:25 2020
+Source archive file:	C:/Uni/Projeto_LSD/Fase1/ProcessadorCompleto_tmp_archive.qar
+Archive was extracted into	C:/Uni/Projeto_LSD/Fase3/
+		 - successfully.

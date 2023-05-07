@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Uni/Projeto_LSD/Fase2/simulation/modelsim
+Econtrolunit
+Z1 w1590854994
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Uni/Projeto_LSD/Fase2/ControlUnit.vhd
+Z6 FC:/Uni/Projeto_LSD/Fase2/ControlUnit.vhd
+l0
+L5
+VmFPCkYYOJh1bcPS^ze=IM0
+!s100 OWM0>n]gS5S>ML?[IkY;L1
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1590855362
+!i10b 1
+Z9 !s108 1590855362.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Uni/Projeto_LSD/Fase2/ControlUnit.vhd|
+Z11 !s107 C:/Uni/Projeto_LSD/Fase2/ControlUnit.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 11 controlunit 0 22 mFPCkYYOJh1bcPS^ze=IM0
+l29
+L25
+VVWNB1j2O7mI`jdIXWM`@W1
+!s100 VN[hP@OBeb5bF3`DS04Cj2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtrolunit_tb
+Z15 w1590698134
+R3
+R4
+R0
+Z16 8C:/Uni/Projeto_LSD/Fase2/ControlUnit_tb.vhd
+Z17 FC:/Uni/Projeto_LSD/Fase2/ControlUnit_tb.vhd
+l0
+L4
+V=fbHP7nC>aHl`7AOT1BhQ3
+!s100 5O_oPZ7N]n3OVLnI7aT;D2
+R7
+32
+Z18 !s110 1590855379
+!i10b 1
+Z19 !s108 1590855379.000000
+Z20 !s90 -reportprogress|300|-work|work|C:/Uni/Projeto_LSD/Fase2/ControlUnit_tb.vhd|
+Z21 !s107 C:/Uni/Projeto_LSD/Fase2/ControlUnit_tb.vhd|
+!i113 1
+Z22 o-work work
+R13
+Astimulus
+R2
+R14
+R3
+R4
+DEx4 work 14 controlunit_tb 0 22 =fbHP7nC>aHl`7AOT1BhQ3
+l24
+L6
+VbfIGWZ0P;`h^KHEQNFh^?0
+!s100 Jz>07Sob0HfCm8Ef:Pi9a3
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R22
+R13

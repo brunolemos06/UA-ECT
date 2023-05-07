@@ -1,0 +1,767 @@
+$comment
+	File created using the following command:
+		vcd file ControlUnit.msim.vcd -direction
+$end
+$date
+	Mon May 25 22:13:23 2020
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module controlunit_vhd_vec_tst $end
+$var wire 1 ! ALUOp [3] $end
+$var wire 1 " ALUOp [2] $end
+$var wire 1 # ALUOp [1] $end
+$var wire 1 $ ALUOp [0] $end
+$var wire 1 % ALUSrc $end
+$var wire 1 & clk $end
+$var wire 1 ' EnPc $end
+$var wire 1 ( func [3] $end
+$var wire 1 ) func [2] $end
+$var wire 1 * func [1] $end
+$var wire 1 + func [0] $end
+$var wire 1 , MemtoReg $end
+$var wire 1 - MemWr $end
+$var wire 1 . opcode [2] $end
+$var wire 1 / opcode [1] $end
+$var wire 1 0 opcode [0] $end
+$var wire 1 1 RegDst $end
+$var wire 1 2 RegWr $end
+$var wire 1 3 RI $end
+$var wire 1 4 rst $end
+
+$scope module i1 $end
+$var wire 1 5 gnd $end
+$var wire 1 6 vcc $end
+$var wire 1 7 unknown $end
+$var wire 1 8 devoe $end
+$var wire 1 9 devclrn $end
+$var wire 1 : devpor $end
+$var wire 1 ; ww_devoe $end
+$var wire 1 < ww_devclrn $end
+$var wire 1 = ww_devpor $end
+$var wire 1 > ww_clk $end
+$var wire 1 ? ww_rst $end
+$var wire 1 @ ww_opcode [2] $end
+$var wire 1 A ww_opcode [1] $end
+$var wire 1 B ww_opcode [0] $end
+$var wire 1 C ww_func [3] $end
+$var wire 1 D ww_func [2] $end
+$var wire 1 E ww_func [1] $end
+$var wire 1 F ww_func [0] $end
+$var wire 1 G ww_EnPc $end
+$var wire 1 H ww_RI $end
+$var wire 1 I ww_RegWr $end
+$var wire 1 J ww_RegDst $end
+$var wire 1 K ww_ALUSrc $end
+$var wire 1 L ww_ALUOp [3] $end
+$var wire 1 M ww_ALUOp [2] $end
+$var wire 1 N ww_ALUOp [1] $end
+$var wire 1 O ww_ALUOp [0] $end
+$var wire 1 P ww_MemWr $end
+$var wire 1 Q ww_MemtoReg $end
+$var wire 1 R \EnPc~output_o\ $end
+$var wire 1 S \RI~output_o\ $end
+$var wire 1 T \RegWr~output_o\ $end
+$var wire 1 U \RegDst~output_o\ $end
+$var wire 1 V \ALUSrc~output_o\ $end
+$var wire 1 W \ALUOp[0]~output_o\ $end
+$var wire 1 X \ALUOp[1]~output_o\ $end
+$var wire 1 Y \ALUOp[2]~output_o\ $end
+$var wire 1 Z \ALUOp[3]~output_o\ $end
+$var wire 1 [ \MemWr~output_o\ $end
+$var wire 1 \ \MemtoReg~output_o\ $end
+$var wire 1 ] \clk~input_o\ $end
+$var wire 1 ^ \next_state.DECODE~q\ $end
+$var wire 1 _ \rst~input_o\ $end
+$var wire 1 ` \state~22_combout\ $end
+$var wire 1 a \state.DECODE~q\ $end
+$var wire 1 b \opcode[2]~input_o\ $end
+$var wire 1 c \opcode[1]~input_o\ $end
+$var wire 1 d \opcode[0]~input_o\ $end
+$var wire 1 e \next_state~9_combout\ $end
+$var wire 1 f \next_state.EXECUTE~q\ $end
+$var wire 1 g \state~17_combout\ $end
+$var wire 1 h \state.EXECUTE~q\ $end
+$var wire 1 i \next_state~10_combout\ $end
+$var wire 1 j \next_state.REG_UPDATE~q\ $end
+$var wire 1 k \state~18_combout\ $end
+$var wire 1 l \state.REG_UPDATE~q\ $end
+$var wire 1 m \next_state~11_combout\ $end
+$var wire 1 n \next_state.WRITE_MEM~q\ $end
+$var wire 1 o \state~19_combout\ $end
+$var wire 1 p \state.WRITE_MEM~q\ $end
+$var wire 1 q \next_state.RESET~q\ $end
+$var wire 1 r \state~21_combout\ $end
+$var wire 1 s \state.RESET~q\ $end
+$var wire 1 t \Selector11~0_combout\ $end
+$var wire 1 u \Selector11~1_combout\ $end
+$var wire 1 v \Selector11~2_combout\ $end
+$var wire 1 w \next_state.FETCH0~q\ $end
+$var wire 1 x \state~20_combout\ $end
+$var wire 1 y \state.FETCH0~q\ $end
+$var wire 1 z \next_state.FETCH1~q\ $end
+$var wire 1 { \state~16_combout\ $end
+$var wire 1 | \state.FETCH1~q\ $end
+$var wire 1 } \Selector0~0_combout\ $end
+$var wire 1 ~ \Selector0~1_combout\ $end
+$var wire 1 !! \EnPc~reg0_q\ $end
+$var wire 1 "! \Selector1~0_combout\ $end
+$var wire 1 #! \RI~reg0_q\ $end
+$var wire 1 $! \Selector2~0_combout\ $end
+$var wire 1 %! \RegWr~reg0_q\ $end
+$var wire 1 &! \Selector3~0_combout\ $end
+$var wire 1 '! \Selector9~0_combout\ $end
+$var wire 1 (! \Selector3~1_combout\ $end
+$var wire 1 )! \RegDst~reg0_q\ $end
+$var wire 1 *! \Selector4~0_combout\ $end
+$var wire 1 +! \ALUSrc~0_combout\ $end
+$var wire 1 ,! \Selector4~1_combout\ $end
+$var wire 1 -! \ALUSrc~reg0_q\ $end
+$var wire 1 .! \func[0]~input_o\ $end
+$var wire 1 /! \Selector8~0_combout\ $end
+$var wire 1 0! \Selector8~1_combout\ $end
+$var wire 1 1! \Selector5~0_combout\ $end
+$var wire 1 2! \Selector8~2_combout\ $end
+$var wire 1 3! \ALUOp[0]~reg0_q\ $end
+$var wire 1 4! \func[1]~input_o\ $end
+$var wire 1 5! \Selector7~0_combout\ $end
+$var wire 1 6! \Selector7~1_combout\ $end
+$var wire 1 7! \ALUOp[1]~reg0_q\ $end
+$var wire 1 8! \func[2]~input_o\ $end
+$var wire 1 9! \Selector6~0_combout\ $end
+$var wire 1 :! \Selector6~1_combout\ $end
+$var wire 1 ;! \ALUOp[2]~reg0_q\ $end
+$var wire 1 <! \func[3]~input_o\ $end
+$var wire 1 =! \Selector5~1_combout\ $end
+$var wire 1 >! \Selector5~2_combout\ $end
+$var wire 1 ?! \ALUOp[3]~reg0_q\ $end
+$var wire 1 @! \Selector9~1_combout\ $end
+$var wire 1 A! \MemWr~reg0_q\ $end
+$var wire 1 B! \Selector10~0_combout\ $end
+$var wire 1 C! \Selector10~1_combout\ $end
+$var wire 1 D! \MemtoReg~reg0_q\ $end
+$var wire 1 E! \ALT_INV_clk~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0&
+0'
+0,
+0-
+01
+02
+03
+04
+05
+16
+x7
+18
+19
+1:
+1;
+1<
+1=
+0>
+0?
+0G
+0H
+0I
+0J
+0K
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+1d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+1u
+1v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+1+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+14!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+1E!
+0(
+0)
+1*
+0+
+0.
+0/
+10
+0@
+0A
+1B
+0C
+0D
+1E
+0F
+0L
+0M
+0N
+0O
+0!
+0"
+0#
+0$
+$end
+#20000
+14
+1?
+1_
+#25000
+1&
+1>
+1]
+0E!
+#50000
+0&
+0>
+0]
+1E!
+1q
+1w
+#75000
+1&
+1>
+1]
+0E!
+#100000
+0&
+04
+0>
+0?
+0_
+0]
+1E!
+1r
+1x
+#125000
+1&
+1>
+1]
+0E!
+1s
+1y
+1t
+1"!
+0v
+#150000
+0&
+0>
+0]
+1E!
+0w
+1z
+1#!
+1{
+0x
+1S
+1H
+13
+#175000
+1&
+1>
+1]
+0E!
+0y
+1|
+1~
+0"!
+1'!
+11!
+#200000
+0&
+0>
+0]
+1E!
+1^
+0z
+1!!
+0#!
+0{
+1`
+0S
+1R
+0H
+1G
+03
+1'
+#225000
+1&
+1>
+1]
+0E!
+1a
+0|
+0~
+1e
+#250000
+0&
+0>
+0]
+1E!
+0^
+1f
+0!!
+1g
+0`
+0R
+0G
+0'
+#275000
+1&
+1>
+1]
+0E!
+0a
+1h
+1i
+01!
+15!
+0e
+16!
+#300000
+0&
+0>
+0]
+1E!
+0f
+1j
+17!
+1k
+0g
+1X
+1N
+1#
+#325000
+1&
+1>
+1]
+0E!
+0h
+1l
+0t
+1$!
+0i
+11!
+05!
+1v
+#350000
+0&
+0>
+0]
+1E!
+0j
+1w
+1%!
+1x
+0k
+1T
+1I
+12
+#375000
+1&
+1>
+1]
+0E!
+0l
+1y
+1"!
+0'!
+01!
+1t
+0$!
+0v
+06!
+#400000
+0&
+0>
+0]
+1E!
+0w
+1z
+1#!
+0%!
+07!
+1{
+0x
+0X
+0T
+1S
+0N
+0I
+1H
+0#
+02
+13
+#425000
+1&
+1>
+1]
+0E!
+0y
+1|
+1~
+0"!
+1'!
+11!
+#450000
+0&
+0>
+0]
+1E!
+1^
+0z
+1!!
+0#!
+0{
+1`
+0S
+1R
+0H
+1G
+03
+1'
+#475000
+1&
+1>
+1]
+0E!
+1a
+0|
+0~
+1e
+#500000
+0&
+0>
+0]
+1E!
+0^
+1f
+0!!
+1g
+0`
+0R
+0G
+0'
+#525000
+1&
+1>
+1]
+0E!
+0a
+1h
+1i
+01!
+15!
+0e
+16!
+#550000
+0&
+0>
+0]
+1E!
+0f
+1j
+17!
+1k
+0g
+1X
+1N
+1#
+#570000
+14
+1?
+1_
+0k
+0r
+#575000
+1&
+1>
+1]
+0E!
+0h
+0s
+0t
+0'!
+0i
+05!
+06!
+1v
+#600000
+0&
+0>
+0]
+1E!
+0j
+1w
+07!
+0X
+0N
+0#
+#625000
+1&
+1>
+1]
+0E!
+#630000
+04
+0?
+0_
+1r
+1x
+#650000
+0&
+0>
+0]
+1E!
+#675000
+1&
+1>
+1]
+0E!
+1s
+1y
+1t
+1"!
+0v
+#700000
+0&
+0>
+0]
+1E!
+0w
+1z
+1#!
+1{
+0x
+1S
+1H
+13
+#725000
+1&
+1>
+1]
+0E!
+0y
+1|
+1~
+0"!
+1'!
+11!
+#750000
+0&
+0>
+0]
+1E!
+1^
+0z
+1!!
+0#!
+0{
+1`
+0S
+1R
+0H
+1G
+03
+1'
+#775000
+1&
+1>
+1]
+0E!
+1a
+0|
+0~
+1e
+#800000
+0&
+0>
+0]
+1E!
+0^
+1f
+0!!
+1g
+0`
+0R
+0G
+0'
+#825000
+1&
+1>
+1]
+0E!
+0a
+1h
+1i
+01!
+15!
+0e
+16!
+#850000
+0&
+0>
+0]
+1E!
+0f
+1j
+17!
+1k
+0g
+1X
+1N
+1#
+#875000
+1&
+1>
+1]
+0E!
+0h
+1l
+0t
+1$!
+0i
+11!
+05!
+1v
+#900000
+0&
+0>
+0]
+1E!
+0j
+1w
+1%!
+1x
+0k
+1T
+1I
+12
+#925000
+1&
+1>
+1]
+0E!
+0l
+1y
+1"!
+0'!
+01!
+1t
+0$!
+0v
+06!
+#950000
+0&
+0>
+0]
+1E!
+0w
+1z
+1#!
+0%!
+07!
+1{
+0x
+0X
+0T
+1S
+0N
+0I
+1H
+0#
+02
+13
+#975000
+1&
+1>
+1]
+0E!
+0y
+1|
+1~
+0"!
+1'!
+11!
+#1000000

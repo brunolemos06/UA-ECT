@@ -1,0 +1,670 @@
+Analysis & Synthesis report for ProcessadorCompleto
+Thu Jun 04 17:03:58 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |ProcessadorCompleto|ControlUnit:F_ControlUnit|next_state
+  9. State Machine - |ProcessadorCompleto|ControlUnit:F_ControlUnit|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Datapath:F_datapath
+ 15. Parameter Settings for User Entity Instance: Datapath:F_datapath|PC:T_PC
+ 16. Parameter Settings for User Entity Instance: Datapath:F_datapath|IMemory:T_IMemory
+ 17. Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_RegDsT
+ 18. Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_ALUSrc
+ 19. Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_MemtoReg
+ 20. Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_OFFSET
+ 21. Port Connectivity Checks: "Datapath:F_datapath|pMux2_1:MUX_OFFSET"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 04 17:03:58 2020       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; ProcessadorCompleto                         ;
+; Top-level Entity Name              ; ProcessadorCompleto                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 2                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                          ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+; Option                                                                     ; Setting             ; Default Value       ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+; Device                                                                     ; EP4CE115F29C7       ;                     ;
+; Top-level entity name                                                      ; ProcessadorCompleto ; ProcessadorCompleto ;
+; Family name                                                                ; Cyclone IV E        ; Cyclone V           ;
+; Use smart compilation                                                      ; Off                 ; Off                 ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                  ;
+; Enable compact report table                                                ; Off                 ; Off                 ;
+; Restructure Multiplexers                                                   ; Auto                ; Auto                ;
+; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                 ;
+; Preserve fewer node names                                                  ; On                  ; On                  ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable              ; Enable              ;
+; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001        ;
+; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993           ;
+; State Machine Processing                                                   ; Auto                ; Auto                ;
+; Safe State Machine                                                         ; Off                 ; Off                 ;
+; Extract Verilog State Machines                                             ; On                  ; On                  ;
+; Extract VHDL State Machines                                                ; On                  ; On                  ;
+; Ignore Verilog initial constructs                                          ; Off                 ; Off                 ;
+; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000                ;
+; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                  ;
+; Infer RAMs from Raw Logic                                                  ; On                  ; On                  ;
+; Parallel Synthesis                                                         ; On                  ; On                  ;
+; DSP Block Balancing                                                        ; Auto                ; Auto                ;
+; NOT Gate Push-Back                                                         ; On                  ; On                  ;
+; Power-Up Don't Care                                                        ; On                  ; On                  ;
+; Remove Redundant Logic Cells                                               ; Off                 ; Off                 ;
+; Remove Duplicate Registers                                                 ; On                  ; On                  ;
+; Ignore CARRY Buffers                                                       ; Off                 ; Off                 ;
+; Ignore CASCADE Buffers                                                     ; Off                 ; Off                 ;
+; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                 ;
+; Ignore LCELL Buffers                                                       ; Off                 ; Off                 ;
+; Ignore SOFT Buffers                                                        ; On                  ; On                  ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                 ;
+; Optimization Technique                                                     ; Balanced            ; Balanced            ;
+; Carry Chain Length                                                         ; 70                  ; 70                  ;
+; Auto Carry Chains                                                          ; On                  ; On                  ;
+; Auto Open-Drain Pins                                                       ; On                  ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                 ; Off                 ;
+; Auto ROM Replacement                                                       ; On                  ; On                  ;
+; Auto RAM Replacement                                                       ; On                  ; On                  ;
+; Auto DSP Block Replacement                                                 ; On                  ; On                  ;
+; Auto Shift Register Replacement                                            ; Auto                ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                ; Auto                ;
+; Auto Clock Enable Replacement                                              ; On                  ; On                  ;
+; Strict RAM Replacement                                                     ; Off                 ; Off                 ;
+; Allow Synchronous Control Signals                                          ; On                  ; On                  ;
+; Force Use of Synchronous Clear Signals                                     ; Off                 ; Off                 ;
+; Auto RAM Block Balancing                                                   ; On                  ; On                  ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                 ; Off                 ;
+; Auto Resource Sharing                                                      ; Off                 ; Off                 ;
+; Allow Any RAM Size For Recognition                                         ; Off                 ; Off                 ;
+; Allow Any ROM Size For Recognition                                         ; Off                 ; Off                 ;
+; Allow Any Shift Register Size For Recognition                              ; Off                 ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                  ;
+; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                 ;
+; Timing-Driven Synthesis                                                    ; On                  ; On                  ;
+; Report Parameter Settings                                                  ; On                  ; On                  ;
+; Report Source Assignments                                                  ; On                  ; On                  ;
+; Report Connectivity Checks                                                 ; On                  ; On                  ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                 ; Off                 ;
+; Synchronization Register Chain Length                                      ; 2                   ; 2                   ;
+; Power Optimization During Synthesis                                        ; Normal compilation  ; Normal compilation  ;
+; HDL message level                                                          ; Level2              ; Level2              ;
+; Suppress Register Optimization Related Messages                            ; Off                 ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                 ;
+; Clock MUX Protection                                                       ; On                  ; On                  ;
+; Auto Gated Clock Conversion                                                ; Off                 ; Off                 ;
+; Block Design Naming                                                        ; Auto                ; Auto                ;
+; SDC constraint protection                                                  ; Off                 ; Off                 ;
+; Synthesis Effort                                                           ; Auto                ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                  ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                 ; Off                 ;
+; Analysis & Synthesis Message Level                                         ; Medium              ; Medium              ;
+; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto                ;
+; Resource Aware Inference For Block RAM                                     ; On                  ; On                  ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+; ControlUnit.vhd                  ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/ControlUnit.vhd         ;         ;
+; pMux2_1.vhd                      ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd             ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/PC.vhd                  ;         ;
+; SignExtend.vhd                   ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/SignExtend.vhd          ;         ;
+; IMemory.vhd                      ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/IMemory.vhd             ;         ;
+; DMemory.vhd                      ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/DMemory.vhd             ;         ;
+; Registers.vhd                    ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/Registers.vhd           ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/ALU.vhd                 ;         ;
+; Datapath.vhd                     ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd            ;         ;
+; ProcessadorCompleto.vhd          ; yes             ; User VHDL File  ; C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Entity Name         ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
+; |ProcessadorCompleto       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |ProcessadorCompleto ; ProcessadorCompleto ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ProcessadorCompleto|ControlUnit:F_ControlUnit|next_state                                                                                                                       ;
++-----------------------+----------------------+----------------------+-----------------------+--------------------+-------------------+-------------------+-------------------+------------------+
+; Name                  ; next_state.PC_BRANCH ; next_state.WRITE_MEM ; next_state.REG_UPDATE ; next_state.EXECUTE ; next_state.DECODE ; next_state.FETCH1 ; next_state.FETCH0 ; next_state.RESET ;
++-----------------------+----------------------+----------------------+-----------------------+--------------------+-------------------+-------------------+-------------------+------------------+
+; next_state.RESET      ; 0                    ; 0                    ; 0                     ; 0                  ; 0                 ; 0                 ; 0                 ; 0                ;
+; next_state.FETCH0     ; 0                    ; 0                    ; 0                     ; 0                  ; 0                 ; 0                 ; 1                 ; 1                ;
+; next_state.FETCH1     ; 0                    ; 0                    ; 0                     ; 0                  ; 0                 ; 1                 ; 0                 ; 1                ;
+; next_state.DECODE     ; 0                    ; 0                    ; 0                     ; 0                  ; 1                 ; 0                 ; 0                 ; 1                ;
+; next_state.EXECUTE    ; 0                    ; 0                    ; 0                     ; 1                  ; 0                 ; 0                 ; 0                 ; 1                ;
+; next_state.REG_UPDATE ; 0                    ; 0                    ; 1                     ; 0                  ; 0                 ; 0                 ; 0                 ; 1                ;
+; next_state.WRITE_MEM  ; 0                    ; 1                    ; 0                     ; 0                  ; 0                 ; 0                 ; 0                 ; 1                ;
+; next_state.PC_BRANCH  ; 1                    ; 0                    ; 0                     ; 0                  ; 0                 ; 0                 ; 0                 ; 1                ;
++-----------------------+----------------------+----------------------+-----------------------+--------------------+-------------------+-------------------+-------------------+------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ProcessadorCompleto|ControlUnit:F_ControlUnit|state                                                                               ;
++------------------+-----------------+-----------------+------------------+---------------+--------------+--------------+--------------+-------------+
+; Name             ; state.PC_BRANCH ; state.WRITE_MEM ; state.REG_UPDATE ; state.EXECUTE ; state.DECODE ; state.FETCH1 ; state.FETCH0 ; state.RESET ;
++------------------+-----------------+-----------------+------------------+---------------+--------------+--------------+--------------+-------------+
+; state.RESET      ; 0               ; 0               ; 0                ; 0             ; 0            ; 0            ; 0            ; 0           ;
+; state.FETCH0     ; 0               ; 0               ; 0                ; 0             ; 0            ; 0            ; 1            ; 1           ;
+; state.FETCH1     ; 0               ; 0               ; 0                ; 0             ; 0            ; 1            ; 0            ; 1           ;
+; state.DECODE     ; 0               ; 0               ; 0                ; 0             ; 1            ; 0            ; 0            ; 1           ;
+; state.EXECUTE    ; 0               ; 0               ; 0                ; 1             ; 0            ; 0            ; 0            ; 1           ;
+; state.REG_UPDATE ; 0               ; 0               ; 1                ; 0             ; 0            ; 0            ; 0            ; 1           ;
+; state.WRITE_MEM  ; 0               ; 1               ; 0                ; 0             ; 0            ; 0            ; 0            ; 1           ;
+; state.PC_BRANCH  ; 1               ; 0               ; 0                ; 0             ; 0            ; 0            ; 0            ; 1           ;
++------------------+-----------------+-----------------+------------------+---------------+--------------+--------------+--------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                    ;
++------------------------------------------------------------+----------------------------------------------------------+
+; Register name                                              ; Reason for Removal                                       ;
++------------------------------------------------------------+----------------------------------------------------------+
+; Datapath:F_datapath|IMemory:T_IMemory|RD[6,12]             ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[3..5]             ; Merged with Datapath:F_datapath|IMemory:T_IMemory|RD[2]  ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[15]               ; Merged with Datapath:F_datapath|IMemory:T_IMemory|RD[14] ;
+; ControlUnit:F_ControlUnit|RegDst                           ; Merged with ControlUnit:F_ControlUnit|MemtoReg           ;
+; ControlUnit:F_ControlUnit|ALUOp[3]                         ; Merged with ControlUnit:F_ControlUnit|ALUOp[2]           ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][0] ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][1] ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][2] ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][3] ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][4] ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][5] ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][6] ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][7] ; Stuck at GND due to stuck port data_in                   ;
+; ControlUnit:F_ControlUnit|next_state.PC_BRANCH             ; Stuck at GND due to stuck port data_in                   ;
+; ControlUnit:F_ControlUnit|state.PC_BRANCH                  ; Stuck at GND due to stuck port data_in                   ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[13,14]            ; Lost fanout                                              ;
+; Datapath:F_datapath|PC:T_PC|cntValue[0..3]                 ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|RI                               ; Lost fanout                                              ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[2]                ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|ALUOp[0..2]                      ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][0] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][0] ; Lost fanout                                              ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[8,9]              ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][0] ; Lost fanout                                              ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[7]                ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][0] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][0] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][0] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][0] ; Lost fanout                                              ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[0]                ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|ALUSrc                           ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][1] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][1] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][1] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][1] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][1] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][1] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][1] ; Lost fanout                                              ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[1]                ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][2] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][2] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][2] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][2] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][2] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][2] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][2] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][3] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][3] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][3] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][3] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][3] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][3] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][3] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][4] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][4] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][4] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][4] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][4] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][4] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][4] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][5] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][5] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][5] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][5] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][5] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][5] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][5] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][6] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][6] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][6] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][6] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][6] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][6] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][6] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[2][7] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[3][7] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[1][7] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[4][7] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[5][7] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[6][7] ; Lost fanout                                              ;
+; Datapath:F_datapath|Registers:Registers|register_mem[7][7] ; Lost fanout                                              ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[10,11]            ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|EnPCOff                          ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|EnPc                             ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|MemtoReg                         ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|RegWr                            ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|MemWr                            ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|next_state.RESET                 ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|next_state.FETCH0                ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|next_state.FETCH1                ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|next_state.DECODE                ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|next_state.EXECUTE               ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|next_state.REG_UPDATE            ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|next_state.WRITE_MEM             ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|state.RESET                      ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|state.FETCH0                     ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|state.FETCH1                     ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|state.DECODE                     ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|state.EXECUTE                    ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|state.REG_UPDATE                 ; Lost fanout                                              ;
+; ControlUnit:F_ControlUnit|state.WRITE_MEM                  ; Lost fanout                                              ;
+; Total Number of Removed Registers = 112                    ;                                                          ;
++------------------------------------------------------------+----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                ;
++------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Register name                                              ; Reason for Removal        ; Registers Removed due to This Register                                            ;
++------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Datapath:F_datapath|IMemory:T_IMemory|RD[6]                ; Stuck at GND              ; ControlUnit:F_ControlUnit|RI,                                                     ;
+;                                                            ; due to stuck port data_in ; Datapath:F_datapath|Registers:Registers|register_mem[2][0],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[3][0],                       ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[8],                                      ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[9],                                      ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][0],                       ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[7], ControlUnit:F_ControlUnit|ALUSrc,    ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[2][1],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[3][1],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][1],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[2][2],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][2],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[2][3],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][3],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[2][4],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][4],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[2][5],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][5],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[2][6],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][6],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[2][7],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[1][7],                       ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[10],                                     ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[11], ControlUnit:F_ControlUnit|MemtoReg, ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|RegWr                                                   ;
+; Datapath:F_datapath|IMemory:T_IMemory|RD[12]               ; Stuck at GND              ; Datapath:F_datapath|Registers:Registers|register_mem[0][0],                       ;
+;                                                            ; due to stuck port data_in ; Datapath:F_datapath|Registers:Registers|register_mem[0][1],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[0][6],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[0][7],                       ;
+;                                                            ;                           ; Datapath:F_datapath|PC:T_PC|cntValue[2], Datapath:F_datapath|PC:T_PC|cntValue[1], ;
+;                                                            ;                           ; Datapath:F_datapath|PC:T_PC|cntValue[0],                                          ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[2], ControlUnit:F_ControlUnit|ALUOp[0],  ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|ALUOp[1], ControlUnit:F_ControlUnit|ALUOp[2],           ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[0],                                      ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[1],                                      ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[3][2],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[4][2],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[5][2],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[6][2],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[7][2],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[3][3],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[4][3],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[5][3],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[6][3],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[7][3],                       ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|EnPCOff                                                 ;
+; ControlUnit:F_ControlUnit|next_state.PC_BRANCH             ; Stuck at GND              ; ControlUnit:F_ControlUnit|state.PC_BRANCH,                                        ;
+;                                                            ; due to stuck port data_in ; Datapath:F_datapath|IMemory:T_IMemory|RD[13],                                     ;
+;                                                            ;                           ; Datapath:F_datapath|IMemory:T_IMemory|RD[14],                                     ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|state.RESET, ControlUnit:F_ControlUnit|state.FETCH0,    ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|state.FETCH1, ControlUnit:F_ControlUnit|state.DECODE,   ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|state.EXECUTE,                                          ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|state.REG_UPDATE,                                       ;
+;                                                            ;                           ; ControlUnit:F_ControlUnit|state.WRITE_MEM                                         ;
+; Datapath:F_datapath|Registers:Registers|register_mem[0][4] ; Stuck at GND              ; Datapath:F_datapath|Registers:Registers|register_mem[3][4],                       ;
+;                                                            ; due to stuck port data_in ; Datapath:F_datapath|Registers:Registers|register_mem[4][4],                       ;
+;                                                            ;                           ; Datapath:F_datapath|Registers:Registers|register_mem[5][4]                        ;
+; Datapath:F_datapath|PC:T_PC|cntValue[3]                    ; Lost Fanouts              ; ControlUnit:F_ControlUnit|EnPc                                                    ;
++------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|register_mem[4][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|register_mem[2][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|register_mem[6][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|register_mem[1][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|register_mem[5][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|register_mem[3][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|register_mem[7][7] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ProcessadorCompleto|Datapath:F_datapath|PC:T_PC|cntValue[0]                    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ProcessadorCompleto|ControlUnit:F_ControlUnit|ALUOp                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|Mux0               ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; No         ; |ProcessadorCompleto|Datapath:F_datapath|ALU:ALU|Mux6                           ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |ProcessadorCompleto|Datapath:F_datapath|Registers:Registers|Mux15              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:F_datapath ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; bus_size       ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:F_datapath|PC:T_PC ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 4     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:F_datapath|IMemory:T_IMemory ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_RegDsT ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 3     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_ALUSrc ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_MemtoReg ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:F_datapath|pMux2_1:MUX_OFFSET ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:F_datapath|pMux2_1:MUX_OFFSET" ;
++--------+-------+----------+----------------------------------------+
+; Port   ; Type  ; Severity ; Details                                ;
++--------+-------+----------+----------------------------------------+
+; input0 ; Input ; Info     ; Stuck at GND                           ;
++--------+-------+----------+----------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Jun 04 17:03:45 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessadorCompleto -c ProcessadorCompleto
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
+    Info (12022): Found design unit 1: ControlUnit-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/ControlUnit.vhd Line: 27
+    Info (12023): Found entity 1: ControlUnit File: C:/Uni/Projeto_LSD/Fase4.2/ControlUnit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pmux2_1.vhd
+    Info (12022): Found design unit 1: pMux2_1-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 11
+    Info (12023): Found entity 1: pMux2_1 File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/PC.vhd Line: 17
+    Info (12023): Found entity 1: PC File: C:/Uni/Projeto_LSD/Fase4.2/PC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file signextend.vhd
+    Info (12022): Found design unit 1: SignExtend-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/SignExtend.vhd Line: 9
+    Info (12023): Found entity 1: SignExtend File: C:/Uni/Projeto_LSD/Fase4.2/SignExtend.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file imemory.vhd
+    Info (12022): Found design unit 1: IMemory-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/IMemory.vhd Line: 13
+    Info (12023): Found entity 1: IMemory File: C:/Uni/Projeto_LSD/Fase4.2/IMemory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file dmemory.vhd
+    Info (12022): Found design unit 1: DMemory-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/DMemory.vhd Line: 14
+    Info (12023): Found entity 1: DMemory File: C:/Uni/Projeto_LSD/Fase4.2/DMemory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registers.vhd
+    Info (12022): Found design unit 1: Registers-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/Registers.vhd Line: 18
+    Info (12023): Found entity 1: Registers File: C:/Uni/Projeto_LSD/Fase4.2/Registers.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-Behavioral File: C:/Uni/Projeto_LSD/Fase4.2/ALU.vhd Line: 14
+    Info (12023): Found entity 1: ALU File: C:/Uni/Projeto_LSD/Fase4.2/ALU.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: Datapath-Structural File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 23
+    Info (12023): Found entity 1: Datapath File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file processadorcompleto.vhd
+    Info (12022): Found design unit 1: ProcessadorCompleto-Structural File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto.vhd Line: 12
+    Info (12023): Found entity 1: ProcessadorCompleto File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file processadorcompleto_tb.vhd
+    Info (12022): Found design unit 1: ProcessadorCompleto_tb-Stimulus File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto_tb.vhd Line: 6
+    Info (12023): Found entity 1: ProcessadorCompleto_tb File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto_tb.vhd Line: 4
+Info (12127): Elaborating entity "ProcessadorCompleto" for the top level hierarchy
+Info (12129): Elaborating entity "Datapath" using architecture "A:structural" for hierarchy "Datapath:F_datapath" File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto.vhd Line: 29
+Info (12129): Elaborating entity "PC" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|PC:T_PC" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 46
+Info (12129): Elaborating entity "IMemory" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|IMemory:T_IMemory" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 59
+Info (12129): Elaborating entity "pMux2_1" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|pMux2_1:MUX_RegDsT" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 70
+Info (10041): Inferred latch for "muxOut[0]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[1]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[2]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (12129): Elaborating entity "Registers" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|Registers:Registers" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 81
+Info (12129): Elaborating entity "SignExtend" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|SignExtend:SignExtend" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 96
+Info (12129): Elaborating entity "pMux2_1" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|pMux2_1:MUX_ALUSrc" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 104
+Info (10041): Inferred latch for "muxOut[0]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[1]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[2]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[3]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[4]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[5]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[6]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[7]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (12129): Elaborating entity "ALU" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|ALU:ALU" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "mult_unsigned" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Uni/Projeto_LSD/Fase4.2/ALU.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "mult_signed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Uni/Projeto_LSD/Fase4.2/ALU.vhd Line: 39
+Info (12129): Elaborating entity "DMemory" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|DMemory:DMemory" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 125
+Info (12129): Elaborating entity "pMux2_1" using architecture "A:behavioral" for hierarchy "Datapath:F_datapath|pMux2_1:MUX_OFFSET" File: C:/Uni/Projeto_LSD/Fase4.2/Datapath.vhd Line: 146
+Info (10041): Inferred latch for "muxOut[0]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[1]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[2]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (10041): Inferred latch for "muxOut[3]" at pMux2_1.vhd(14) File: C:/Uni/Projeto_LSD/Fase4.2/pMux2_1.vhd Line: 14
+Info (12129): Elaborating entity "ControlUnit" using architecture "A:behavioral" for hierarchy "ControlUnit:F_ControlUnit" File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto.vhd Line: 47
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "Datapath:F_datapath|DMemory:DMemory|data_memory" is uninferred due to asynchronous read logic File: C:/Uni/Projeto_LSD/Fase4.2/DMemory.vhd Line: 19
+Info (17049): 94 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto.vhd Line: 7
+    Warning (15610): No output dependent on input pin "reset" File: C:/Uni/Projeto_LSD/Fase4.2/ProcessadorCompleto.vhd Line: 8
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Thu Jun 04 17:03:58 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
+
+
