@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: #fff;
+  height: 100vh;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* CSS Smooth Scroll */
+  overflow-y: scroll; 
+  overflow-x: hidden; 
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.lead {
+  font-size: 1.5em;
+  background: rgba(0,0,0,0.5);
+  width: 50%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 3vh;
+  padding: 1.5vh;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2vh;
+  color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+  color: skyblue;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	scroll-snap-align: center;
+/*
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+*/
+}
+
+section h1 {
+  font-size: 8vh;
+  margin-top: 6.5vh;
+  color: #FFA500;
+}
+
+section#home {
+  background: url('../imagens/fundo.jpg') no-repeat center center/cover;
+}
+
+section#introducao {
+  background: url('../imagens/fundo5_bw.jpg') no-repeat center center/cover;
+  
+}
+
+section#vervideos{
+  background: url('../imagens/fundo3.jpg') no-repeat center center/cover;
+}
+
+section#historia {
+  background: url('../imagens/fundo4_edit.png') no-repeat center center/cover;
+}
+
+section#disciplinas {
+  background: url('../imagens/fundo6_bw.jpg') no-repeat center center/cover;
+}
+
+section#rotinadosatletas {
+  background: url('../imagens/fundo7_bw.jpg') no-repeat center center/cover;
+}
+
+section#curiosidades {
+  background: url('../imagens/fundo2.jpg') no-repeat center center/cover;
+}
+
+section#about {
+  background: url('../imagens/fundoabout.jpg') no-repeat center center/cover;
+}
+
+section nav {
+	margin-top: 5vh;
+	margin-left: 55vh;
+}
+
+.teste {
+	margin-top: -70vh;
+}
+
+.logo{
+	text-align: center;
+	margin-top: 35vh;
+}
+
+
+.btn{
+	text-decoration: none;
+	font-weight:700;
+	color: #000;
+	padding: 5px 20px;
+	border: none;
+	border-radius: 4px;
+	width: 8%;
+	position: absolute;
+	top: 12%;
+	left: 94%;
+	transform: translate(-50%,-50%);
+	transition: 0.6s ease;
+	text-align: center;
+	
+}
+ .btn-white{
+	transition: 0.6s ease;
+	background: #FFA500;
+	color: #000; 
+	box-shadow:2px 5px 0 #EE7600
+ }
+ .btn-white:hover{
+	transition: 0.6s ease;
+	background: #EE7600;
+	color: #fff; 
+	box-shadow:0 5px 0 #EE7600
+ }
+ .btn-white:active{
+	box-shadow: none;
+	
+ }
+.modal{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+	transition: 200ms ease-in-out;
+	text-align:center;
+	border:2px #000;
+	border-radius: 5px;
+	background-color: #fff;
+	width: 700px;
+	max-width: 80%;
+ }
+ .modal-header{
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px #000;
+ }
+ .modal-header .title {
+	color:#000;
+	font-size: 1,25rem;
+	font-weight: bold;
+ }
+ .modal-header .close{
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.24rem;
+	font-weight: bold;
+ }
+ .modal-body {
+	color:#000;
+	padding: 10px 15px;
+	
+ } 
+ .hidden{
+	display: none;
+ }
+
+ 
+ 
+
+

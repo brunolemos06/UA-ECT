@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="iso-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Atletismo</title>
+	<link rel="stylesheet" href="../css/styles_iframes.css">
+	<script src="../jscript/iframe.js"></script>
+</head>
+<body>
+	<section>
+			<nav>
+                <h1 id="text_titulo">Corridas de velocidade</h1>
+                <iframe id="text_frame" width="60%" height="300%" src="../frame/frame_disciplinas_1.html" frameborder="0"></iframe>
+        	</nav>
+     </section>
+	<div class="container">
+	  <nav class="navvert">
+		<ul>
+		  <li><a></a></li>
+		  <li><a></a></li>
+		  <li><a id='velocidade'
+				onclick="
+					unselect_menu('meiofundo');
+					unselect_menu('fundo');
+					unselect_menu('horizontais');
+					unselect_menu('verticais');
+					unselect_menu('disco');
+					unselect_menu('martelo');
+					unselect_menu('peso');
+					unselect_menu('dardo');
+                    select_menu('velocidade', '../frame/frame_disciplinas_1.html','Corridas de velocidade')">Corridas de velocidade</p>
+			</li>
+			<li><a id='meiofundo'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('fundo');
+					unselect_menu('horizontais');
+					unselect_menu('verticais');
+					unselect_menu('disco');
+					unselect_menu('martelo');
+					unselect_menu('peso');
+					unselect_menu('dardo');
+                    select_menu('meiofundo', '../frame/frame_disciplinas_2.html','Corridas de meio-fundo')">Corridas de meio-fundo</p>
+			</li>
+			<li><a id='fundo'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('meiofundo');
+					unselect_menu('horizontais');
+					unselect_menu('verticais');
+					unselect_menu('disco');
+					unselect_menu('martelo');
+					unselect_menu('peso');
+					unselect_menu('dardo');
+                    select_menu('fundo', '../frame/frame_disciplinas_3.html','Corridas de fundo')">Corridas de fundo</p>
+			</li>
+			<li><a id='horizontais'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('meiofundo');
+					unselect_menu('fundo');
+					unselect_menu('verticais');
+					unselect_menu('disco');
+					unselect_menu('martelo');
+					unselect_menu('peso');
+					unselect_menu('dardo');
+                    select_menu('horizontais', '../frame/frame_disciplinas_4.html','Saltos horizontais')">Saltos horizontais</p>
+			</li>
+			<li><a id='verticais'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('meiofundo');
+					unselect_menu('fundo');
+					unselect_menu('horizontais');
+					unselect_menu('disco');
+					unselect_menu('martelo');
+					unselect_menu('peso');
+					unselect_menu('dardo');
+                    select_menu('verticais', '../frame/frame_disciplinas_5.html','Saltos verticais')">Saltos verticais</p>
+			</li>
+			<li><a id='disco'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('meiofundo');
+					unselect_menu('fundo');
+					unselect_menu('horizontais');
+					unselect_menu('verticais');
+					unselect_menu('martelo');
+					unselect_menu('peso');
+					unselect_menu('dardo');
+                    select_menu('disco', '../frame/frame_disciplinas_6.html','Lançamento do disco')">Lançamento do disco</p>
+			</li>
+			<li><a id='martelo'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('meiofundo');
+					unselect_menu('fundo');
+					unselect_menu('horizontais');
+					unselect_menu('verticais');
+					unselect_menu('disco');
+					unselect_menu('peso');
+					unselect_menu('dardo');
+                    select_menu('martelo', '../frame/frame_disciplinas_7.html','Lançamento do martelo')">Lançamento do martelo</p>
+			</li>
+			<li><a id='peso'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('meiofundo');
+					unselect_menu('fundo');
+					unselect_menu('horizontais');
+					unselect_menu('verticais');
+					unselect_menu('disco');
+					unselect_menu('martelo');
+					unselect_menu('dardo');
+                    select_menu('peso', '../frame/frame_disciplinas_8.html','Lançamento do peso')">Lançamento do peso</p>
+			</li>
+			<li><a id='dardo'
+				onclick="
+					unselect_menu('velocidade');
+					unselect_menu('meiofundo');
+					unselect_menu('fundo');
+					unselect_menu('horizontais');
+					unselect_menu('verticais');
+					unselect_menu('disco');
+					unselect_menu('martelo');
+					unselect_menu('peso');
+                    select_menu('dardo', '../frame/frame_disciplinas_9.html','Lançamento do dardo')">Lançamento do dardo</p>
+			</li>
+		</ul>
+	  </nav>
+  </div>
+  <script> select_menu('velocidade', '../frame/frame_disciplinas_1.html','Corridas de velocidade') </script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="iso-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Atletismo</title>
+	<link rel="stylesheet" href="../css/styles_iframes.css">
+	<script src="../jscript/iframe.js"></script>
+</head>
+<body>
+	
+	<section>
+			<nav>
+                <h1 id="text_titulo">Origem do Atletismo</h1>
+				<iframe id="text_frame" width="60%" height="300%" src="../frame/frame_about_1.html" frameborder="0"></iframe>
+			</nav>
+    </section>
+      
+	<div class="container">
+	  <nav class="navvert">
+		<ul>
+			<li><a></a></li>
+			<li><a></a></li>
+			<li><a id='About'
+				onclick="
+					unselect_menu('Bibliografia');
+                    select_menu('About', '../frame/frame_about_1.html','About')">About</p>
+			</li>
+
+            <li><a id='Bibliografia'
+				onclick="
+					unselect_menu('About');
+					select_menu('Bibliografia', '../frame/frame_about_2.html','Bibliografia')">Bibliografia</p>
+			</li>
+		</ul>
+	  </nav>
+  </div>
+  
+  <script> select_menu('About', '../frame/frame_about_1.html','About') </script>
+
+</body>
+</html>
+

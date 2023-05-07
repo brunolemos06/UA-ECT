@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html">
+<head>
+	<meta charset="iso-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Atletismo</title>
+	<link rel="stylesheet" href="../css/styles_iframes.css">
+	<script src="../jscript/iframe.js"></script>
+</head>
+<body>
+	
+	<section>
+			<nav>
+                <h1 id="text_titulo">Dia a dia de um atleta</h1>
+                <iframe id="text_frame" width="60%" height="300%" src="../frame/frame_rotina_1.html" frameborder="0"></iframe>
+        	</nav>
+      </section>
+    
+	<div class="container">
+	  <nav class="navvert">
+		<ul>
+		  <li><a></a></li>
+		  <li><a></a></li>
+		  <li><a id='diadia'
+				onclick="
+					unselect_menu('alimentacao_2');
+					unselect_menu('sono');
+					unselect_menu('alimentacao');
+                    select_menu('diadia', '../frame/frame_rotina_1.html','Dia a dia de um atleta')">Dia a dia de um atleta</p>
+
+			</li>
+			<li><a id='sono'
+				onclick="
+					unselect_menu('alimentacao_2');
+					unselect_menu('diadia');
+					unselect_menu('alimentacao');
+                    select_menu('sono', '../frame/frame_rotina_2.html','Importância do sono')">Importância do sono</p>
+
+			</li>
+			<li><a id='alimentacao'
+				onclick="
+					unselect_menu('alimentacao_2');
+					unselect_menu('diadia');
+					unselect_menu('sono');
+                    select_menu('alimentacao', '../frame/frame_rotina_3.html','Importância da alimentação 1')">Importância da alimentação 1</p>
+
+			</li>
+		    <li><a id='alimentacao_2'
+				onclick="
+					unselect_menu('diadia');
+					unselect_menu('sono');
+					unselect_menu('alimentacao');
+                    select_menu('alimentacao_2', '../frame/frame_rotina_4.html','Importância da alimentação 2')">Importância da alimentação 2</p>
+
+			</li>
+		</ul>
+	  </nav>
+  </div>
+  <script> select_menu('diadia', '../frame/frame_rotina_1.html','Dia a dia de um atleta') </script>
+</body>
+</html>
+
