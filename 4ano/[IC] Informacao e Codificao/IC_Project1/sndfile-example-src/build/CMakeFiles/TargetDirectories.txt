@@ -1,0 +1,9 @@
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/wav_effects.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/wav_cp.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/wav_hist.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/wav_dct.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/wav_quant.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/wav_cmp.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/BitStream.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/edit_cache.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project1/sndfile-example-src/build/CMakeFiles/rebuild_cache.dir

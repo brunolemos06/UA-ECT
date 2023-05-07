@@ -1,0 +1,75 @@
+# Real - Time Operative Systems Course #
+
+# Computation Models and Introduction to RTOS Architecture and Services
+
+Transformational model -> O programa começa e termina e resulta em dados de saída
+Reactive Model         -> O programa começa a executar e indefinidamente o programa e vai operando no
+			  fluxo de dados.
+Real-Time model        -> O programa tem de se manter sincronizado com o fluxo de dados de entrada e
+			  impõe restrições de tempo ao programa para a sua execução.
+
+Definição de task      -> Sequencia de ativações que são executadas pelo CPU sem interrupções
+
+ -------------------------------------------------------------------------------
+| ORDEM                  : Tempo de execução, offset, período, deadline absoluto |
+|------------------------------------------------------------------------------- |
+| periódico              :  (1,0,4,5)                                            |
+| sporadic               :  (1,4,5) [nao tem offset]                             |
+ ------------------------------------------------------------------------------- 
+
+Desencadeamento das ações pode ser por:
+	-> Por tempo:
+		(e.g através de uma interrupção periódica do temporizador)
+	-> Por evento:
+		(e.g acionado por uma mudança do estado do sistema)
+
+Sistemas acionados por eventos:
+	Verficação de alarmes . . .
+	A taxa de utilização do CPU é variável de acordo com a freq da ocorrencia dos eventos
+	O worst case é mal definido	
+
+Sistemas acionados por tempo  :
+	Sistemas ciberfisicos . . .
+	A utilização do CPU  é constante mesmo quando nao há alterações do sistema
+	A pior situação é bem definida
+
+Criação de tarefas     -> associação de um codigo a um espaço variável privado ( pilha privada )
+Task execution         -> execução direta do codigo utilizando a stack
+
+A satck nos Sistemas em tempo real nao tem ordem de chegada, [ Scheduling criterion ]
+
+The basic set of dynamic states is :
+	idle -> ready -> execution
+
+Other states :
+	blocked -> sempre que uma task tenta utilizar um recurso que está a ser utilizado
+	sleep   -> caso necessitem por um determinado tempo de esperar por um determinado pacote
+
+#Estruturas de gestao
+TCP -> TASK CONTROL BLOCK
+	Estrutura que guarda infos sobre tasks (e.g Identificador de tarefa (etc..) )
+	Costumam ser linkedlists para facilitar as pesquisas sobre as tasks
+	
+SCB -> Semaphore Control Block
+	Contém pelo menos:
+		Counter
+		Semaphore queue
+		Pointer to the next SCB
+
+#Funcoes de gestao do tempo
+Verificar restrições temporais (e.g violações de prazos, medir intervalos de tempo )
+
+metodos:
+	Periodic tick ->
+		Interropções periódicas (system ticks)
+	
+	Single-shot/tickless ->
+		só gera interropções apenas quando há ativações periódicas de tarefas ou outros eventos
+
+Precisamos de fazer o minimo multiplo comum para descobrir o minimo tick.
+
+
+Funcoes de gestao : Scheduler -> o programador seleciona a tarefa a executar
+
+Funcoes de gestao : Dispatch  -> coloca em execução a tarefa selecionada pelo programador
+	Em sistemas preventivos o dispatch também manipula a stack

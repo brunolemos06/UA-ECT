@@ -1,0 +1,6 @@
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project3/src/build/CMakeFiles/codec_video_tests.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project3/src/build/CMakeFiles/ex2_codec_video.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project3/src/build/CMakeFiles/ex2_decoder_video.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project3/src/build/CMakeFiles/video_comp.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project3/src/build/CMakeFiles/edit_cache.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project3/src/build/CMakeFiles/rebuild_cache.dir

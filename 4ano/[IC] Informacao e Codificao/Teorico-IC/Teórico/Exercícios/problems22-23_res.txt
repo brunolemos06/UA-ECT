@@ -1,0 +1,137 @@
+1.
+x(t) € [0,1]
+8 níveis
+a) Max Error
+
+Emax = delta/2 = (1/8)/2 = 1/16
+
+Delta is the spacing between quantizer levels
+delta = (max_signalvalue - min_signalvalue)/number_of_levels = (1-0)/8 = 1/8
+
+_____________________________
+                              ^
+                              |  
+                              |
+----------------------------- | delta
+                    ^         |
+                    | delta/2 |
+                    v	      |
+_____________________________ v
+
+b) Quantization levels
+
+
+
+Distribuição não ideal dos níveis de quantização:
+_____________________________
+                              ^
+                              | delta
+                              |
+                              v
+-----------------------------
+ 			      ^
+                              | delta
+                              |
+----------------------------- v
+                              ...
+-----------------------------  
+                              ^
+                              | delta
+                              | 
+_____________________________ v
+
+Nós queremos a distribuição ideal
+
+_____________________________
+                              ^
+                              | delta/2
+                              |
+                              v
+-----------------------------            level 7
+ 			      ^
+                              | delta/2
+                              |
+----------------------------- v 	 level 6
+                              ...
+-----------------------------  		 level 1
+                              ^
+                              | delta/2
+                              | 
+_____________________________ v 	level 0
+
+
+lk = signal_min_value + delta/2 + k.delta = 0 + 1/16 + k.1/8 = 1/16 + k*1/8, k = [0,7]
+Níveis ideias num quantizador uniforme
+
+4.
+DVD9 ≃ 8,5 GBytes
+RGB -> 24bits/pixel -> 8 bits cada componente
+25 fps; 720x576 pixels
+
+Q: Quantos minutos cabem sem compressão?
+
+bits in 1 frame: 24*720*576 = 9953280 bits
+Em 25 frames = 24*720*576*25 = 248832000 bits
+(If calculanting in bytes do -> 25frames = 3bytes*720*576*25 = 31104000 bytes)
+
+8.5GBytes de capacity -> 8.5 x 10⁹ segundos 
+??????????????????????????? HOW DO WE KNOW THAT THE CAPACITY IS REFLECTED IN SECONDS ??????
+
+T = (8.5*10^9x8 / 720*576*24*25) segundos ≃ 273.277 segs ≃ 4,555 minutes
+	    x8 because
+	    bytes to bits
+10.
+H[x(n)] = y(n) = x(n) + 2y(n-1)
+
+_________________________________________________________
+SIDE NOTE:
+Basta dar um exemplo que mostre que o sistema é instável.
+Se fosse mostrar que ele é estável com realimentação -> demasiado dificil, prof não pede
+Para mostrar que ele é estável basta mostrar que não tem realimentação, como na seguinte expressão:
+
+H[x(n)] = y(n) = 3x(n) + 5x(n-1) -> como o valor atual não depende do valor anterior (y variable) não tem realimentação. 
+---------------------------------------------------------
+
+Para mostrar a instabilidade, escolhemos um sinal mais simples
+  
+  ^
+  |
+ 1|---> sigma(n)
+  !
+  ! 
+---___________---->
+  0
+                
+Existe um impulso inicial, e depois o input é sempre 0.
+Assumimos que y(n) é 0 para n < 0. ---> y(n) = 0, n < 0
+
+y(0) = x(0) + 2y(n-1) -> n-1 = -1 
+     = 1    + 2*0 -----> -1 < 0
+     = 1
+     
+y(1) = x(1) + 2y(0)
+     = 0    + 2*1 
+     = 2
+     
+y(2) = x(2) + 2y(1)
+     = 0    + 2*2
+     = 4
+     
+y(3) = 8
+y(4) = 16
+...
+y(n) = 2^n  ----> saída está sempre a duplicar
+       ---> crescer indefinidamente --> não está a tender para 0
+       (Se tendesse para 0, teríamos que experimentar um sinal diferente de input mostrado no gráfico)
+
+Ainda que o teu input signal seja amplitude-limited, o output signal não é.
+Portanto, é instável.
+
+Tal como no exemplo das notas nas propriedades de stability:
+"So, for an amplitude-limited input, we get a response that grows without limit, so the system is
+unstable."
+ 
+12.
+14.
+20.
+28.

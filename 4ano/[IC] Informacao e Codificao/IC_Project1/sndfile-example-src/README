@@ -1,0 +1,11 @@
+To build:
+	make
+
+To test:
+	../sndfile-example-bin/wav_cp sample.wav copy.wav 	// copies "sample.wav" into "copy.wav"
+	../sndfile-example-bin/wav_hist sample.wav 0 		// outputs the histogram of channel 0 (left)
+	../sndfile-example-bin/wav_dct sample.wav out.wav 	// generates a DCT "compressed" version
+	../sndfile-example-bin/wav_cmp sample.wav out.wav	// prints the (SNR) of a certain audio file
+	../sndfile-example-bin/wav_effects sample.wav out.wav ( reverse | left | right | single-echo | double_echo | triple_echo | amplitude_loop) // produces some audio effects
+	../sndfile-example-bin/wav_quant sample.wav out.wav <bits_to cut>	//outputs quantized sound version
+	../sndfile-example-bin/Bitstream			// read and write bits from the file

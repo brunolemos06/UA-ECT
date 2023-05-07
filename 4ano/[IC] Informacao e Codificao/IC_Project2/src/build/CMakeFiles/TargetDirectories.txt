@@ -1,0 +1,9 @@
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/ex1.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/ex2.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/encoder_image.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/decoder_image.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/secgolomb.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/golomb_code_tests.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/golomb_codec_tests.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/edit_cache.dir
+/home/bruno/Projects/UA-ECT/4ano/IC/IC_Project2/src/build/CMakeFiles/rebuild_cache.dir

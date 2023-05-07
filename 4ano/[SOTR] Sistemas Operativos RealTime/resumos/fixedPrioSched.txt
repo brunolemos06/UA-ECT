@@ -1,0 +1,50 @@
+# SOTR
+# fixed priority Scheduling
+
+A queue é ordenada pelas prioridades. A primeira a ser executada é a com maior prioridade
+
+System preemptive:
+	Sempre que uma tarefa entra na queue caso ela tenha menor prioridade do que a que está
+	a executar nesse momento esta é movida para a ready queue
+
+pros:
+	Scales
+	Tasks sao afetadas pelo nivel de prioridade
+	
+cons:
+	Implementação mais complexa
+	Custo de execução mais elevados
+	Em caso de sobrecarga as tasks com mais prioridade podem sobrepor as tasks com menor
+
+SCHEDULABITY TESTS BASED ON:
+	CPU ->
+		
+	RESPONSE TIME->
+		LIU&LAYLAND'S
+			U(n) = soma [ ci [tempo de execução]/ti [dead] ] 
+			Uiub = n * ( 2^(1/n) - 1 )
+			
+			U(n) <= Uiub  :
+			uma instrução por periodo garantida se a formula a cima garantir
+
+			U(n) > 1           --- not schedulable
+			U(n) <= Uiub       --- schedulable
+			1 >= U(n) >= Uiub  --- indeterminate
+
+		Bini&Buttazo
+			produtorio [( ci / ti) ] <=2
+			uma intrução por periodo garantida se a formula a cima garantir
+
+Se a task for periodic harmonic entao é schedulable
+
+condicao response-time analysis method :
+	full preemption, synchronous release, independent tasks and D <= T
+
+Worst case
+	Rwci = max_k( fi(i,k)  -  a(i,k) )
+	Rwci < Di task é schedulable
+	O worst-case é quando a task é ativa ao mesmo tempo que outra task com high-priority
+
+Condicoes de paragem :
+	RWCI ( m )  > Di
+	Rwci (m +1) = Rwci ( m )

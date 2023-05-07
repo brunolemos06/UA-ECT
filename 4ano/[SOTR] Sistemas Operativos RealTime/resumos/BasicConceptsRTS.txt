@@ -1,0 +1,70 @@
+# Real - Time Operative Systems Course #
+
+# BASIC CONCEPTS ON RTS
+-> REAL TIME
+	É importante o tempo de execução das tarefas, que ocorram no tempo certo: Bom response Time
+	"Dependency of a computer system on the time, as it exists in a particular physical process"
+
+-> Real-Time System
+	Sistemas Intervalos de execução finitos impostos por um processo físico
+
+-> Real-Time Science
+	Ramo que estuda os sistemas em Real-Time
+
+-> O principal objetivo do estudo de sistemas em Tempo Real é o desenvolvimento de técnicas para:
+	Concepção
+	Análise e 
+	Verificação
+
+-> Num RTS os principais aspetos a considerar são:
+	Tempo de execução
+	Tempo de resposta
+	Regularidade dos eventos periódicos
+
+-> Razões para atrasos no tempo:
+	O tempo de execução:
+		estrutura do codigo [ linguagem,ciclos,condicões ]
+		DMA,cache,pipeline
+		SO ou kernel
+	Tempo de resposta e regularidade
+		Interrompe
+		Multi-tarefas
+		Acesso a recursos partilhados
+
+É importante verificar os piores casos de tempo de respostas e os melhores casos para verificar
+o impacto.
+
+Quais sao os requisitos impostos aos sistemas em tempo real?
+	Funcional
+	Temporal ( FOCO PRINCIPAL )
+	Confiança
+
+A base de dados em tempo real deve ser actualizada para manter a coerencia entre o mundo físico
+e a sua representação interna
+
+Initial offset      -> tempo antes do primeiro lançamento de uma tarefa
+Periodo             -> tempo entre os sucessivas tasks de uma tarefa
+tempo de lançamento -> tempo instantaneo da task
+start time          -> tempo que começa a task
+finish              -> tempo que a task está finalizada
+execution time      -> tempo necessário para o processador executar a task sem interrupções
+abosolute deadline  -> tempo em que a task tem de estar completa
+response time       -> tempo decorrido entre o lançamento da task e a sua conclusão
+Slack/Laxity        -> tempo maximo que uma task pode ser atrasada na sua ativação para ser concluída
+
+
+Existem 3 formas de classificar as restrições temporais de acordo com a utilidade:
+	-> Soft - Mesmo que passe o limite temporal D afeta apenas o serviço
+	-> Firm - Após o limite D o resultado nao tem qualquer utilidade no programa
+	-> Hard  - Quando a Restrição temporal nao é satisfeita pode levar a um fracasso catastrófico
+
+Soft Real-Time -> O sistema só tem restrições firme ou soft em real-time (e.g simuladores)
+Hard Real-Time -> O sistema pelo menos uma restição hard em tempo real
+               -> fiabilidade ultra-elevada ( < 10^-9 falhas/hora )
+              
+best effort    -> O SIstema nao está sujeito a restrições em tempo real
+ 
+Aspetos importantes a considerar nos sistemas críticos:
+	Segurança : Interface estável entre os susbsistemas críticos
+	
+	Os sistemas devem saber lidar com os piores cenários

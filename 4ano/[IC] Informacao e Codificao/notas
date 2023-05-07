@@ -1,0 +1,13 @@
+DELTA = (MAX_SIGNAL - MIN_SIGNAL) / number_of_levels
+
+Erro_Max = DELTA / 2
+
+N_bits_per_audio = (sample_rate) * (bit_depth) * (duration in secounds)
+
+N_bits_per_image = (size)*(size)*(bits per pixel)
+
+ppi = pixels per inch
+
+sistema linear ? 
+
+time invariant ?
