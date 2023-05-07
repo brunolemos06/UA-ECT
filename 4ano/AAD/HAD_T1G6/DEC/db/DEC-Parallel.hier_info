@@ -1,0 +1,383 @@
+|decoder
+y[0] => Y_to_C:calc_c.y[0]
+y[0] => calc_m4:cal_m4.x[0]
+y[1] => Y_to_C:calc_c.y[1]
+y[2] => Y_to_C:calc_c.y[2]
+y[2] => calc_m4:cal_m4.x[1]
+y[3] => Y_to_C:calc_c.y[3]
+y[4] => Y_to_C:calc_c.y[4]
+y[4] => calc_m4:cal_m4.x[2]
+y[5] => Y_to_C:calc_c.y[5]
+y[6] => Y_to_C:calc_c.y[6]
+y[7] => Y_to_C:calc_c.y[7]
+m[0] << validator:val_m1.m
+m[1] << validator:val_m2.m
+m[2] << validator:val_m3.m
+m[3] << calc_m4:cal_m4.m
+v << and_1bit:and2.Y
+
+
+|decoder|Y_to_C:calc_c
+y[0] => xor_1bit:xor_y0_y1.IN1
+y[0] => xor_1bit:xor_y0_y2.IN1
+y[0] => xor_1bit:xor_y0_y4.IN1
+y[1] => xor_1bit:xor_y0_y1.IN2
+y[1] => xor_1bit:xor_y1_y3.IN1
+y[1] => xor_1bit:xor_y1_y5.IN1
+y[2] => xor_1bit:xor_y2_y3.IN1
+y[2] => xor_1bit:xor_y0_y2.IN2
+y[2] => xor_1bit:xor_y2_y6.IN1
+y[3] => xor_1bit:xor_y2_y3.IN2
+y[3] => xor_1bit:xor_y1_y3.IN2
+y[3] => xor_1bit:xor_y3_y7.IN1
+y[4] => xor_1bit:xor_y4_y5.IN1
+y[4] => xor_1bit:xor_y4_y6.IN1
+y[4] => xor_1bit:xor_y0_y4.IN2
+y[5] => xor_1bit:xor_y4_y5.IN2
+y[5] => xor_1bit:xor_y5_y7.IN1
+y[5] => xor_1bit:xor_y1_y5.IN2
+y[6] => xor_1bit:xor_y6_y7.IN1
+y[6] => xor_1bit:xor_y4_y6.IN2
+y[6] => xor_1bit:xor_y2_y6.IN2
+y[7] => xor_1bit:xor_y6_y7.IN2
+y[7] => xor_1bit:xor_y5_y7.IN2
+y[7] => xor_1bit:xor_y3_y7.IN2
+c1[0] <= xor_1bit:xor_y0_y1.Y
+c1[1] <= xor_1bit:xor_y2_y3.Y
+c1[2] <= xor_1bit:xor_y4_y5.Y
+c1[3] <= xor_1bit:xor_y6_y7.Y
+c2[0] <= xor_1bit:xor_y0_y2.Y
+c2[1] <= xor_1bit:xor_y1_y3.Y
+c2[2] <= xor_1bit:xor_y4_y6.Y
+c2[3] <= xor_1bit:xor_y5_y7.Y
+c3[0] <= xor_1bit:xor_y0_y4.Y
+c3[1] <= xor_1bit:xor_y1_y5.Y
+c3[2] <= xor_1bit:xor_y2_y6.Y
+c3[3] <= xor_1bit:xor_y3_y7.Y
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y0_y1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y2_y3
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y4_y5
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y6_y7
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y0_y2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y1_y3
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y4_y6
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y5_y7
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y0_y4
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y1_y5
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y2_y6
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|Y_to_C:calc_c|xor_1bit:xor_y3_y7
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1
+x[0] => and_1bit:and1.IN1
+x[0] => or_1bit:or2.IN1
+x[1] => and_1bit:and1.IN2
+x[1] => or_1bit:or2.IN2
+x[2] => and_1bit:and2.IN1
+x[2] => or_1bit:or3.IN1
+x[3] => and_1bit:and2.IN2
+x[3] => or_1bit:or3.IN2
+m <= or_1bit:or1.Y
+v <= xor_1bit:xor1.Y
+
+
+|decoder|validator:val_m1|and_1bit:and1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|and_1bit:and2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|or_1bit:or1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|or_1bit:or2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|not_1bit:not1
+IN1 => Y.DATAIN
+Y <= IN1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|or_1bit:or3
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|not_1bit:not2
+IN1 => Y.DATAIN
+Y <= IN1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|or_1bit:or4
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m1|xor_1bit:xor1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2
+x[0] => and_1bit:and1.IN1
+x[0] => or_1bit:or2.IN1
+x[1] => and_1bit:and1.IN2
+x[1] => or_1bit:or2.IN2
+x[2] => and_1bit:and2.IN1
+x[2] => or_1bit:or3.IN1
+x[3] => and_1bit:and2.IN2
+x[3] => or_1bit:or3.IN2
+m <= or_1bit:or1.Y
+v <= xor_1bit:xor1.Y
+
+
+|decoder|validator:val_m2|and_1bit:and1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|and_1bit:and2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|or_1bit:or1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|or_1bit:or2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|not_1bit:not1
+IN1 => Y.DATAIN
+Y <= IN1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|or_1bit:or3
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|not_1bit:not2
+IN1 => Y.DATAIN
+Y <= IN1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|or_1bit:or4
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m2|xor_1bit:xor1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3
+x[0] => and_1bit:and1.IN1
+x[0] => or_1bit:or2.IN1
+x[1] => and_1bit:and1.IN2
+x[1] => or_1bit:or2.IN2
+x[2] => and_1bit:and2.IN1
+x[2] => or_1bit:or3.IN1
+x[3] => and_1bit:and2.IN2
+x[3] => or_1bit:or3.IN2
+m <= or_1bit:or1.Y
+v <= xor_1bit:xor1.Y
+
+
+|decoder|validator:val_m3|and_1bit:and1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|and_1bit:and2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|or_1bit:or1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|or_1bit:or2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|not_1bit:not1
+IN1 => Y.DATAIN
+Y <= IN1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|or_1bit:or3
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|not_1bit:not2
+IN1 => Y.DATAIN
+Y <= IN1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|or_1bit:or4
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|validator:val_m3|xor_1bit:xor1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|calc_m4:cal_m4
+x[0] => and_1bit:and1.IN1
+x[0] => or_1bit:or1.IN1
+x[1] => xor_1bit:xor2.IN1
+x[2] => xor_1bit:xor3.IN1
+in_m[0] => xor_1bit:xor2.IN2
+in_m[1] => xor_1bit:xor3.IN2
+m <= or_1bit:or2.Y
+
+
+|decoder|calc_m4:cal_m4|xor_1bit:xor2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|calc_m4:cal_m4|xor_1bit:xor3
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|calc_m4:cal_m4|and_1bit:and1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|calc_m4:cal_m4|or_1bit:or1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|calc_m4:cal_m4|and_1bit:and2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|calc_m4:cal_m4|or_1bit:or2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|and_1bit:and1
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoder|and_1bit:and2
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

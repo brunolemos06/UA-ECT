@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Wed Nov 16 10:10:58 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : COD-serial
+Top-level Entity Name : serial_encoder
+Family : Cyclone IV GX
+Total logic elements : 29
+    Total combinational functions : 28
+    Dedicated logic registers : 12
+Total registers : 12
+Total pins : 11
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

@@ -1,0 +1,397 @@
+|serial_encoder
+clk => control_unit:block_control_unit.clk
+clk => FlipFlopD:block_ffD.clk
+clk => calc_y:block_calc_y0.clk
+clk => calc_y:block_calc_y1.clk
+clk => calc_y:block_calc_y2.clk
+clk => calc_y:block_calc_y3.clk
+clk => calc_y:block_calc_y4.clk
+clk => calc_y:block_calc_y5.clk
+clk => calc_y:block_calc_y6.clk
+clk => calc_y:block_calc_y7.clk
+rstGr => SIG_RESET_CONTROL_UNIT.IN1
+rstGr => SIG_RESET_FLIPFLOP.IN1
+m => FlipFlopD:block_ffD.D
+Y[0] << calc_y:block_calc_y0.yx
+Y[1] << calc_y:block_calc_y1.yx
+Y[2] << calc_y:block_calc_y2.yx
+Y[3] << calc_y:block_calc_y3.yx
+Y[4] << calc_y:block_calc_y4.yx
+Y[5] << calc_y:block_calc_y5.yx
+Y[6] << calc_y:block_calc_y6.yx
+Y[7] << calc_y:block_calc_y7.yx
+
+
+|serial_encoder|control_unit:block_control_unit
+clk => counter_3bit:Block_Counter.clk
+rstGR => counter_3bit:Block_Counter.rstGr
+kx[0] <= ROM:Block_ROM.dataOut[0]
+kx[1] <= ROM:Block_ROM.dataOut[1]
+kx[2] <= ROM:Block_ROM.dataOut[2]
+kx[3] <= ROM:Block_ROM.dataOut[3]
+kx[4] <= ROM:Block_ROM.dataOut[4]
+kx[5] <= ROM:Block_ROM.dataOut[5]
+kx[6] <= ROM:Block_ROM.dataOut[6]
+kx[7] <= ROM:Block_ROM.dataOut[7]
+kx[8] <= ROM:Block_ROM.dataOut[8]
+kx[9] <= ROM:Block_ROM.dataOut[9]
+
+
+|serial_encoder|control_unit:block_control_unit|counter_3bit:Block_Counter
+clk => s_count[0].CLK
+clk => s_count[1].CLK
+clk => s_count[2].CLK
+rstGr => s_count.OUTPUTSELECT
+rstGr => s_count.OUTPUTSELECT
+rstGr => s_count.OUTPUTSELECT
+count[0] <= s_count[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= s_count[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= s_count[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|control_unit:block_control_unit|ROM:Block_ROM
+address[0] => Mux0.IN10
+address[0] => Mux1.IN10
+address[0] => Mux2.IN10
+address[0] => Mux3.IN10
+address[0] => Mux4.IN10
+address[0] => Mux5.IN10
+address[0] => Mux6.IN10
+address[0] => Mux7.IN10
+address[0] => Mux8.IN10
+address[0] => Mux9.IN5
+address[1] => Mux0.IN9
+address[1] => Mux1.IN9
+address[1] => Mux2.IN9
+address[1] => Mux3.IN9
+address[1] => Mux4.IN9
+address[1] => Mux5.IN9
+address[1] => Mux6.IN9
+address[1] => Mux7.IN9
+address[1] => Mux8.IN9
+address[1] => Mux9.IN4
+address[2] => Mux0.IN8
+address[2] => Mux1.IN8
+address[2] => Mux2.IN8
+address[2] => Mux3.IN8
+address[2] => Mux4.IN8
+address[2] => Mux5.IN8
+address[2] => Mux6.IN8
+address[2] => Mux7.IN8
+address[2] => Mux8.IN8
+dataOut[0] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[8] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[9] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|flipFlopD:block_ffD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y0
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y0|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y0|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y0|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y0|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y1
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y1|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y1|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y1|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y1|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y2
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y2|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y2|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y2|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y2|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y3
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y3|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y3|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y3|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y3|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y4
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y4|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y4|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y4|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y4|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y5
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y5|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y5|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y5|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y5|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y6
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y6|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y6|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y6|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y6|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y7
+clk => flipFlopD:Block1_flipFlopD.clk
+rstGR => flipFlopD:Block1_flipFlopD.nRst
+rstGR => comb.IN0
+en => comb.IN1
+en => and_1bit:BLOCK_AND.IN2
+mi => and_1bit:mi_and_kx.IN1
+kx => and_1bit:mi_and_kx.IN2
+yx <= and_1bit:BLOCK_AND.Y
+
+
+|serial_encoder|calc_y:block_calc_y7|and_1bit:mi_and_kx
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y7|xor_1bit:outand_XOR_outFlipFlop
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y7|flipFlopD:Block1_flipFlopD
+clk => Q~reg0.CLK
+D => Q.DATAB
+nRst => Q.OUTPUTSELECT
+en => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|serial_encoder|calc_y:block_calc_y7|and_1bit:BLOCK_AND
+IN1 => Y.IN0
+IN2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
