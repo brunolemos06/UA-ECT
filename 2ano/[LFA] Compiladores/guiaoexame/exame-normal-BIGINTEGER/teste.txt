@@ -1,0 +1,22 @@
+valor2 = read;
+while(valor2):
+    if(valor2):
+    else:
+        print valor2;
+        valor2 = valor2 -1;
+    end;
+end;
+// valor2 aqui já é 0
+
+if(valor2):
+    print 000;
+end;
+print 11111111111111110+1;
+
+valor2 =read;
+valor4 =read;
+valor3 = 1;
+for(valor2 : valor4):
+    print valor2;
+    valor2 = valor2 + 1;
+end;

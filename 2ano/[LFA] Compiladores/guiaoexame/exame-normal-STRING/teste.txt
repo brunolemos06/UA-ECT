@@ -1,0 +1,6 @@
+valor1 = 10000000;valor2 = 100;
+while(valor1):
+    print valor1;
+    valor1 = valor1 -1;
+end;
+print valor1+valor2;

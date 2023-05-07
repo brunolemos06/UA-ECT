@@ -1,0 +1,22 @@
+GAS LISTING ex1_bruno.s 			page 1
+
+
+DEFINED SYMBOLS
+         ex1_bruno.s:1      *ABS*:000000000000000b READ_CORE_TIMER
+         ex1_bruno.s:2      *ABS*:000000000000000c RESET_CORE_TIMER
+         ex1_bruno.s:3      *ABS*:000000000000bf88 SFR_BASE_HI
+         ex1_bruno.s:4      *ABS*:0000000000006100 TRISE
+         ex1_bruno.s:5      *ABS*:0000000000006110 PORTE
+         ex1_bruno.s:6      *ABS*:0000000000006120 LATE
+         ex1_bruno.s:7      *ABS*:0000000000006040 TRISB
+         ex1_bruno.s:8      *ABS*:0000000000006050 PORTB
+         ex1_bruno.s:9      *ABS*:0000000000006060 LATB
+         ex1_bruno.s:10     *ABS*:0000000000000001 increment
+         ex1_bruno.s:16     .text:0000000000000000 main
+         ex1_bruno.s:33     .text:000000000000002c loop
+         ex1_bruno.s:61     .text:0000000000000070 delay
+         ex1_bruno.s:62     .text:0000000000000074 for
+         ex1_bruno.s:72     .text:00000000000000a0 end
+         ex1_bruno.s:66     .text:0000000000000084 while
+
+NO UNDEFINED SYMBOLS
