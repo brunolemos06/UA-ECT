@@ -4,6 +4,7 @@
 
 ### 1st Year
 - [LSD] Laboratórios e Sistemas Digitais
+- [LABI] Laboratorios de Informatica
 
 ### 2nd Year
 - [AC1] Arquitetura de Computadores I
