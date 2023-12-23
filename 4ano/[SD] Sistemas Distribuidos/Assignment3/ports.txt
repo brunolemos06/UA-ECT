@@ -1,0 +1,22 @@
+REPO -> sd104@l040101-ws01.ua.pt 22131
+CONTROL -> sd104@l040101-ws02.ua.pt 22132
+CONCENTRATION -> sd104@l040101-ws03.ua.pt 22133
+ASSAULT1 -> sd104@l040101-ws08.ua.pt 22134 0
+ASSAULT2 -> sd104@l040101-ws05.ua.pt 22135 1
+MUSEUM -> sd104@l040101-ws06.ua.pt 22136
+
+RMI REGISTRY -> l040101-ws07.ua.pt 22137
+REGISTRY -> l040101-ws07.ua.pt 22138        
+
+MASTER THIEF -> sd104@l040101-ws09.ua.pt
+NORMAL THIEF -> sd104@l040101-ws10.ua.pt
+(NT e MT mesma maquina?)
+
+NAMES
+ConcentrationSite
+ControlCollectionSite
+AssaultParty0
+AssaultParty1
+Museum
+GeneralRepo
+RegisterHandler

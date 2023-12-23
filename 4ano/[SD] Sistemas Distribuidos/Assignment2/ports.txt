@@ -1,0 +1,28 @@
+General Repo -> 22130
+Control Collection -> 22131
+Concentration -> 22132
+Assault Party #1 -> 22133
+Assault Party #2 -> 22134
+Museum -> 22135
+
+
+---------------------------------------
+
+General Repo -> sd104@l040101-ws01.ua.pt
+Control Collection -> sd104@l040101-ws02.ua.pt
+Concentration -> sd104@l040101-ws03.ua.pt
+Assault Party #1 -> sd104@l040101-ws04.ua.pt
+Assault Party #2 -> sd104@l040101-ws05.ua.pt
+Museum -> sd104@l040101-ws06.ua.pt
+
+---------------------------------------
+
+REPO -> sd104@l040101-ws01.ua.pt 22130
+CONTROL -> sd104@l040101-ws02.ua.pt 22131
+CONCENTRATION -> sd104@l040101-ws03.ua.pt 22132
+ASSAULT1 -> sd104@l040101-ws04.ua.pt 22133
+ASSAULT2 -> sd104@l040101-ws05.ua.pt 22134
+MUSEUM -> sd104@l040101-ws06.ua.pt 22135
+
+NORMAL THIEF -> sd104@l040101-ws09.ua.pt
+MASTER THIEF -> sd104@l040101-ws08.ua.pt

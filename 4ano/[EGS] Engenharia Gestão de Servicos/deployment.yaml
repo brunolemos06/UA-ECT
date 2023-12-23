@@ -1,0 +1,363 @@
+---
+#Deployment auth backend
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-backend
+  namespace: egs-ridemate
+spec: 
+  selector:
+    matchLabels:
+      app: auth-backend
+  template:
+    metadata:
+      labels:
+        app: auth-backend
+    spec:
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+      containers:
+        - name: auth-backend
+          image: registry.deti:5000/egs-ridemate/auth_backend:v2 
+          ports: 
+            - containerPort: 5100
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: users-db-volume
+              mountPath: /auth_backend/volumes/
+      restartPolicy: Always
+      volumes:
+        - name: users-db-volume
+          persistentVolumeClaim:
+            claimName: users-db-pvc
+---
+#Deployment auth frontend
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-frontend
+  namespace: egs-ridemate
+spec: 
+  selector:
+    matchLabels:
+      app: auth-frontend
+  template:
+    metadata:
+      labels:
+        app: auth-frontend
+    spec:
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+      containers:
+        - name: auth-frontend
+          image: registry.deti:5000/egs-ridemate/auth_frontend:v2
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
+      restartPolicy: Always
+---
+#Deployment chat-api
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-api
+  namespace: egs-ridemate
+spec:
+  selector:
+    matchLabels:
+      app: chat-api
+  template:
+    metadata:
+      labels:
+        app: chat-api
+    spec:
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+      containers:
+        - name: chat-api
+          image: registry.deti:5000/egs-ridemate/chat_api:v1 
+          ports: 
+            - containerPort: 5010
+          env:
+            - name: TWILIO_ACCOUNT_SID
+              value: "ACf8b3ce0eb04f21fe7ab30a6e0c58c7d9"
+            - name: TWILIO_AUTH_TOKEN
+              value: "4cb96b0112a701609a3b621bc403af76"
+            - name: TWILIO_SERVICE_SID
+              value: "ISec5512aaa2db4d6abaf1bd31a60fa474"
+          imagePullPolicy: Always
+      restartPolicy: Always
+---
+#Deployment composer
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: composer
+  namespace: egs-ridemate
+spec:
+  selector:
+    matchLabels:
+      app: composer
+  template:
+    metadata:
+      labels:
+        app: composer
+    spec:
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+      containers:
+        - name: composer
+          image: registry.deti:5000/egs-ridemate/composer:v6 
+          ports: 
+            - containerPort: 8080
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: composer-db-volume
+              mountPath: /composer/volumes/
+      restartPolicy: Always
+      volumes:
+        - name: composer-db-volume
+          persistentVolumeClaim:
+            claimName: composer-db-pvc
+---
+#Deployment payments
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payments
+  namespace: egs-ridemate
+spec:
+  selector:
+    matchLabels:
+      app: payments
+  template:
+    metadata:
+      labels:
+        app: payments
+    spec:
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+      containers:
+        - name: payments
+          image: registry.deti:5000/egs-ridemate/payments:v2 
+          ports: 
+            - containerPort: 8000
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: payments-db-volume
+              mountPath: /payments/volumes/
+      restartPolicy: Always
+      volumes:
+        - name: payments-db-volume
+          persistentVolumeClaim:
+            claimName: payments-db-pvc
+---
+#Deployment reviews
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reviews
+  namespace: egs-ridemate
+spec:
+  selector:
+    matchLabels:
+      app: reviews
+  template:
+    metadata:
+      labels:
+        app: reviews
+    spec:
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+      containers:
+        - name: reviews
+          image: registry.deti:5000/egs-ridemate/reviews:v1 
+          ports: 
+            - containerPort: 5005
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: reviews-db-volume
+              mountPath: /review/volumes/
+      restartPolicy: Always
+      volumes:
+        - name: reviews-db-volume
+          persistentVolumeClaim:
+            claimName: reviews-db-pvc
+---
+#Deployment trip
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trip
+  namespace: egs-ridemate
+spec:
+  selector:
+    matchLabels:
+      app: trip
+  template:
+    metadata:
+      labels:
+        app: trip
+    spec:
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+      containers:
+        - name: trip
+          image: registry.deti:5000/egs-ridemate/trip:v2 
+          ports: 
+            - containerPort: 5015
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: trip-db-volume
+              mountPath: /maps_api/volumes/
+      restartPolicy: Always
+      volumes:
+        - name: trip-db-volume
+          persistentVolumeClaim:
+            claimName: trip-db-pvc
+---
+#Service auth backend
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-backend
+  namespace: egs-ridemate
+spec:
+  selector:
+    app: auth-backend
+  ports:
+    - port: 5100
+      targetPort: 5100
+---
+#Service auth frontend
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-frontend
+  namespace: egs-ridemate
+spec:
+  selector:
+    app: auth-frontend
+  ports:
+    - port: 80
+      targetPort: 3000
+---
+#Service chat-api
+apiVersion: v1
+kind: Service
+metadata:
+  name: chat-api
+  namespace: egs-ridemate
+spec:
+  selector:
+    app: chat-api
+  ports:
+    - port: 5010
+      targetPort: 5010
+---
+#Service composer
+apiVersion: v1
+kind: Service
+metadata:
+  name: composer
+  namespace: egs-ridemate
+spec:
+  selector:
+    app: composer
+  ports:
+    - port: 80
+      targetPort: 8080
+---
+#Service payments
+apiVersion: v1
+kind: Service
+metadata:
+  name: payments
+  namespace: egs-ridemate
+spec:
+  selector:
+    app: payments
+  ports:
+    - port: 8000
+      targetPort: 8000
+---
+#Service reviews
+apiVersion: v1
+kind: Service
+metadata:
+  name: reviews
+  namespace: egs-ridemate
+spec:
+  selector:
+    app: reviews
+  ports:
+    - port: 5005
+      targetPort: 5005
+---
+#Service trip
+apiVersion: v1
+kind: Service
+metadata:
+  name: trip
+  namespace: egs-ridemate
+spec:
+  selector:
+    app: trip
+  ports:
+    - port: 5015
+      targetPort: 5015
+---
+#INGRESS LOAD BALANCER
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-k3s
+  namespace: egs-ridemate
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/frontend-entry-points: http,https
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
+    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+spec:
+  rules:
+    - host: ridemate.deti
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: composer
+              port: 
+                number: 80
+    - host: ridemate.duckdns.org
+      http:
+        paths:
+        - path: /front
+          pathType: Prefix
+          backend:
+            service:
+              name: auth-frontend
+              port: 
+                number: 80
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: auth-backend
+              port: 
+                number: 5100

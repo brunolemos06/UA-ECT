@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #282c34;
+      color: white;
+      font-size: calc(10px + 2vmin);
+      font-family: Arial, sans-serif;
+    }
+
+    .ButtonDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* gap */
+      margin: 0 20px;
+    }
+
+    .GoogleLoginButton,
+    .GithubLoginButton {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .GoogleLoginButton img,
+    .GithubLoginButton img {
+      height: 70px;
+      margin-right: 10px;
+    }
+
+    .GoogleLoginButton:hover,
+    .GithubLoginButton:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div class="ButtonDiv">
+    <div>
+      <button onclick="handleClick()" class="GoogleLoginButton">
+        <img src="static/images/GoogleLogo.png" alt="Google">
+        Login with Google
+      </button>
+
+      <script>
+        function handleClick() {
+          window.location.href = 'http://ridemate.duckdns.org/google';
+        }
+      </script>
+    </div>
+    <div>
+      <button onclick="handleClick2()" class="GithubLoginButton">
+        <img src="static/images/GithubLogo.png" alt="Github">
+        Login with Github
+      </button>
+      <script>
+        function handleClick2() {
+          window.location.href = 'http://ridemate.duckdns.org/github';
+        }
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

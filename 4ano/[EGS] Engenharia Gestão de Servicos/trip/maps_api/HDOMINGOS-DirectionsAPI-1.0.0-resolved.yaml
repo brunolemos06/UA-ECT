@@ -1,0 +1,308 @@
+---
+openapi: 3.0.0
+info:
+  title: Simple Inventory API
+  description: This is a simple API
+  contact:
+    email: you@your-company.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/HDOMINGOS/DirectionsAPI/1.0.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /directions/trip:
+    get:
+      tags:
+      - directions
+      summary: searches inventory
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: Trip.get
+      parameters:
+      - name: id
+        in: query
+        description: pass an optional trip identifier
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InventoryItem'
+        "400":
+          description: bad input parameter
+    post:
+      tags:
+      - directions
+      summary: adds a trip
+      description: Adds a trip to the system
+      operationId: Trip.post
+      parameters:
+      - name: id
+        in: query
+        description: Trip identifier
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      - name: owner_id
+        in: query
+        description: Trip owner identifier
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      - name: origin
+        in: query
+        description: Trip origin (String or coordinates (latitude, longitude))
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: destination
+        in: query
+        description: Trip destination (String or coordinates (latitude, longitude))
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: available_sits
+        in: query
+        description: Number of available sits on that Trip
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+      - name: starting_date
+        in: query
+        description: Trip starting date
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: DateTimeStamp
+      requestBody:
+        description: Inventory item to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InventoryItem'
+      responses:
+        "201":
+          description: item created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+    delete:
+      tags:
+      - directions
+      summary: delete trip
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: Trip.delete
+      parameters:
+      - name: id
+        in: query
+        description: pass a trip identifier
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InventoryItem'
+        "400":
+          description: bad input parameter
+  /directions/owner:
+    get:
+      tags:
+      - directions
+      summary: gets the owner info
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: Onwer.get
+      parameters:
+      - name: id
+        in: query
+        description: pass an optional owner identifier
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InventoryItem'
+        "400":
+          description: bad input parameter
+  /directions/participant:
+    get:
+      tags:
+      - directions
+      summary: searches inventory
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: Participant.get
+      parameters:
+      - name: id
+        in: query
+        description: pass an optional participant identifier
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InventoryItem'
+        "400":
+          description: bad input parameter
+    post:
+      tags:
+      - directions
+      summary: adds a participant to a trip
+      description: Adds a participant to a trip
+      operationId: Participant.post
+      parameters:
+      - name: id
+        in: query
+        description: Participant identifier
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      - name: trip_id
+        in: query
+        description: Trip identifier
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      - name: pickup_location
+        in: query
+        description: Participant pickup location
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      requestBody:
+        description: Inventory item to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InventoryItem'
+      responses:
+        "201":
+          description: item created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+    delete:
+      tags:
+      - directions
+      summary: delete participant from trip
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: Participant.delete
+      parameters:
+      - name: id
+        in: query
+        description: pass a participant identifier
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: Unique Identifier
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InventoryItem'
+        "400":
+          description: bad input parameter
+components:
+  schemas:
+    InventoryItem:
+      required:
+      - id
+      - manufacturer
+      - name
+      - releaseDate
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        name:
+          type: string
+          example: Widget Adapter
+        releaseDate:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        manufacturer:
+          $ref: '#/components/schemas/Manufacturer'
+    Manufacturer:
+      required:
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+          example: ACME Corporation
+        homePage:
+          type: string
+          format: url
+          example: https://www.acme-corp.com
+        phone:
+          type: string
+          example: 408-867-5309

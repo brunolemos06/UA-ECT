@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Redirect</title>
+</head>
+<body>
+	<h1>Chat Redirect</h1>
+	<label for="name">Nickname pls:</label>
+	<input type="text" id="name" name="name">
+	
+<button onclick="window.location.href = 'http://localhost:5000/conversations/' + document.getElementById('name').value; return false;">Enter</button>
+</body>
+</html>

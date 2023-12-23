@@ -1,0 +1,16 @@
+Outside attacker:
+    Russian Federation with 1191 flows
+
+Servers:
+    192.168.100.231
+    192.168.100.235
+    192.168.100.238
+    192.168.100.239
+    192.168.100.240
+
+Botnet_suspect_ips:
+    192.168.100.114
+    192.168.100.30
+    192.168.100.43
+    192.168.100.89
+    they all communicate with each other on data_attack but not on data_normal

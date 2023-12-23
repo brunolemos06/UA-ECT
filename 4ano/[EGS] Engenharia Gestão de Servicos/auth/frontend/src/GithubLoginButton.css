@@ -1,0 +1,18 @@
+.GithubLoginButton {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    
+    background-image: '../images/GithubLogo.png';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

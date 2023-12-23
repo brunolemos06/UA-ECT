@@ -1,0 +1,9 @@
+.ButtonDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}

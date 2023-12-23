@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  version: V1
+  title: ''
+  description: ''
+
+host: 127.0.0.1:8000
+schemes:
+  - http
+    
+paths:
+  /paypal/create/order:
+    post:
+      summary: Creates an order for payment
+      description: Creates a paypal order for user to pay
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: string
+                  description: Amount the user is supposed to pay
+      responses:
+        '201':    # status code
+          description: Returns an order id and link for user to pay
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  order_id:
+                    type: string
+                    description: order id used for capturing order later
+                  linkForPayment:
+                    type: string
+                    description: url for user to authorize payment
+        '400':
+          description: Returns error based on order creation
+          content:
+            aplication/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: something went wrong with order creation
+        '422':
+          description: Returns error based on ongoing order creation
+          content:
+            aplication/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: something went wrong with ongoing order creation
+                    
+  /paypal/capture/order:
+    post:
+      summary: Captures paypal order 
+      description: Checks if an existing paypal order is completed and captures it
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                order_id:
+                  type: string
+                  description: Used for knowning what order are we tyring to capture
+      responses:
+        '201':    # status code
+          description: Returns a success message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: success
+        '400':
+          description: Returns error based on order creation
+          content:
+            aplication/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: the order doesn't exist or something went wrong with order capture
+        '422':
+          description: Returns error based on ongoing order creation
+          content:
+            aplication/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: something went wrong with completed order creation

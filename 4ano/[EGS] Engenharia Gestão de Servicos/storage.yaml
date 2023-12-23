@@ -1,0 +1,149 @@
+# PV for auth
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: users-db-pv
+spec:
+  capacity:
+    storage: 100Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  hostPath:
+    path: /auth_backend
+---
+# PVC for auth
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: users-db-pvc
+  namespace: egs-ridemate
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+# PV for composer-db (composer)
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: composer-db-pv
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
+  hostPath:
+    path: /composer
+---
+# PVC for composer-db (composer)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: composer-db-pvc
+  namespace: egs-ridemate
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+# PV for reviews-db (reviews)
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: reviews-db-pv
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
+  hostPath:
+    path: /review
+---
+# PVC for reviews-db (reviews)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: reviews-db-pvc
+  namespace: egs-ridemate
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+# PV for payments-db (payments)
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: payments-db-pv
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
+  hostPath:
+    path: /payments
+---
+# PVC payments-db (payments)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: payments-db-pvc
+  namespace: egs-ridemate
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+# PV for trip-db (trip)
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: trip-db-pv
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
+  hostPath:
+    path: /maps_api
+---
+# PVC for trip-db (trip)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: trip-db-pvc
+  namespace: egs-ridemate
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 100Mi
