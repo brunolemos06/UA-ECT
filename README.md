@@ -1,8 +1,6 @@
 # Projects-ECT
 
-![](https://i.imgur.com/tNCsdRg.png)
-
-### Projects developed for the Computers and Telematics Engineering BSc + MSc at the University of Aveiro
+### Computers and Telematics Engineering BSc + MSc at the University of Aveiro
 
 ### 1st Year
 - [LSD] Laboratórios e Sistemas Digitais
@@ -15,7 +13,7 @@
 - [MPEI] Metodos Probablisticos Engenharia Informática
 - [SE] Sistemas eletrónicos
 
-### 3rd
+### 3rd Year
 - [AS] Analise Sistemas
 - [BD] Base de Dados
 - [IA] Inteligencia Artifical
@@ -26,7 +24,7 @@
 - [RC2] Redes Comunicações II
 - [SIO] Seguranca e Organizaoes
 
-### 4th
+### 4th Year
 - [AAD] Arquitetura Alto Desempenho
 - [RMI] Robotica Movel Inteligente
 - [CM] Comunicacoes moveis
@@ -37,3 +35,9 @@
 - [SD] Sistemas distribuídos
 - [RSA] Redes e Sistemas Autonomos
 - [ASE] Arquitetura Sistemas Embutidos
+
+### 5th Year
+- [PW] Programacao Web
+- [RVA] Realidade Virtual e Aumentada
+- [SM] Seminario
+- [FINAL] Disertação
