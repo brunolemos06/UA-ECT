@@ -32,3 +32,8 @@
 - [CM] Comunicacoes moveis
 - [SOTR] Sistemas Operativos em Tempo Real
 - [IC] Informacao e Codificao
+- [EGS] Engenharia e Gestão de Serviços
+- [SRC] Segurança Redes e Comunicações
+- [SD] Sistemas distribuídos
+- [RSA] Redes e Sistemas Autonomos
+- [ASE] Arquitetura Sistemas Embutidos
