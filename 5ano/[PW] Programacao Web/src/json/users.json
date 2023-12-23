@@ -1,0 +1,28 @@
+{
+  "users": [
+      {
+          "email": "user@ua.pt",
+          "password": "123",
+          "position": "Coordinator",
+          "phone": "+351 888 888 888"
+      },
+      {
+          "email": "ricardo@ua.pt",
+          "password": "123",
+          "position": "Coordinator",
+          "phone": "+351 777 777 777"
+      },
+      {
+          "email": "bruno@ua.pt",
+          "password": "123",
+          "position": "Coordinator",
+          "phone": "+351 888 888 888"
+      },
+      {
+          "email": "tiago@ua.pt",
+          "password": "123",
+          "position": "Coordinator",
+          "phone": "+351 999 999 999"
+      }
+  ]
+}

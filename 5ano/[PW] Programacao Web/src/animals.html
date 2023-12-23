@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Animals</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Include Bootstrap CSS
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-lg">
+            <div class="container-fluid px-lg-5">
+                <a href="index.html"><img class="logoImage" src="images/logo.png" alt="Logo" width="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-black"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav-item-effect navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item dropdown border-0 rounded-pill mx-lg-1 mx-sm-0">
+                            <a class="nav-link dropdown-toggle" style="color: var(--bs-primary);" href="#" id="animalsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Animals
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="animalsDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('all')">All Animals</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('dog')">Dogs</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('cat')">Cats</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('bird')">Birds</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('horse')">Horses</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" href="contacts.html">Contacts</a></li>
+                        <li class="nav-item border border-0 rounded ms-lg-5 ms-sm-0 bg-white"><a class="nav-link" href="login.html">Sign In</a></li>
+                        <li class="nav-item border border-0 rounded mx-lg-2 mx-lg-0 bg-primary"><a class="nav-link text-white" href="register.html">Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <header>
+        <div class="container mt-5">
+            <div class="row text-center mb-3">
+                <div class="col-12">
+                    <h1 class="fs-1 text-black fw-semibold">Animals Available</h1>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <form>
+                        <!-- Search Bar -->
+                        <div class="input-group mb-3">
+                            <input id="searchInput" type="text" class="form-control" placeholder="Search animals">
+                        </div>
+            
+                        <!-- Filter -->
+                        <div class="form-group">
+                            <label for="animal-filter">Filter by Type:</label>
+                            <select class="form-control mt-2" id="animal-filter">
+                                <option value="all">All Animals</option>
+                                <option value="dog">Dogs</option>
+                                <option value="cat">Cats</option>
+                                <option value="bird">Birds</option>
+                                <option value="horse">horse</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                            
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="mb-5">
+        <div class="container mt-4 text-center">
+            <h1 class="mb-3 mt-5">All Animals</h1>
+    
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">    
+                <!-- Add more cards as needed -->
+            </div>
+            <div class="row">
+                <div class="col-12 mt-5">´
+                    <a href="addmoreanimals.html"><button class="text-decoration-none bg-primary bg-opacity-75 text-white p-2 border-1 rounded-4 shadow-lg ">Add an animal</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-light rounded-lg shadow mt-5 mt-md-5">
+        <div class="container-fluid max-w-xl mx-auto p-4 py-4 px-md-4 py-md-8">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <img src="images/logo.png" alt="PetAdoption" width="100" class="me-3 hover-scale-125">
+                        <span class="self-center fs-4 fw-semibold">PetAdoption</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-unstyled list-inline d-flex flex-wrap align-items-center text-sm fw-medium text-gray-500 mb-0 justify-content-center justify-content-md-end">
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">About</a>
+                        </li>
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">Licensing</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="contacts.html" class="text-decoration-none text-secondary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-200 mx-auto my-8">
+            <p class="text-center text-sm text-gray-500">© 2023 <a href="index.html" class="hover-underline">PetAdoption™</a>. All Rights Reserved.</p>
+        </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/animals.js"></script>
+        <script src="js/navbarButtons.js"></script>
+
+    </body>
+
+</html>

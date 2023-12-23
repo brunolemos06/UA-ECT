@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>AddAnimals</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Include Bootstrap CSS
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-lg">
+            <div class="container-fluid px-lg-5">
+                <a href="index.html"><img class="logoImage" src="images/logo.png" alt="Logo" width="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-black"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav-item-effect navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item dropdown border-0 rounded-pill mx-lg-1 mx-sm-0">
+                            <a class="nav-link dropdown-toggle" style="color: var(--bs-primary);" href="#" id="animalsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Animals
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="animalsDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('all')">All Animals</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('dog')">Dogs</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('cat')">Cats</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('bird')">Birds</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('horse')">Horses</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" href="contacts.html">Contacts</a></li>
+                        <li class="nav-item border border-0 rounded ms-lg-5 ms-sm-0 bg-white"><a class="nav-link" href="login.html">Sign In</a></li>
+                        <li class="nav-item border border-0 rounded mx-lg-2 mx-lg-0 bg-primary"><a class="nav-link text-white" href="register.html">Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <header>
+        
+    </header>
+
+    <!-- Cards -->
+    <section class="headImage">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col-12 mt-5">
+                    <h1 class="fs-1 text-black fw-semibold">Add more animals</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-6" >
+                    <div class="card border-0 shadow bg-light shadow-lg">
+                        <div class="card-body bg-light ">
+                            <form style="text-align: center;">
+                                <!-- put image in -->
+                                <div class="mb-3 fw-bold">
+                                    <img src="images/user.png" alt="animal" style="display: block; margin: 20px auto;" width="25%">
+                                    <hr class="py-3"/>
+                                    <label for="animal-image">Animal Images</label>
+                                    <input type="file" class="form-control" id="animal-image" placeholder="Animal Image">
+                                </div>
+                                <!-- name -->
+                                <div class="mb-3">
+                                    <input type="text" id="animal-name" name="animal-name" class="form-control" placeholder="Animal Name">
+                                </div>
+                                <!-- scientific name -->
+                                <div class="mb-3">
+                                    <input type="text" id="scientific-name" name="scientific-name" class="form-control" placeholder="Scientific Name">
+                                </div>
+                                <!-- habitat -->
+                                <div class="mb-3">
+                                    <input type="text" id="habitat" name="habitat" class="form-control" placeholder="Habitat">
+                                </div>
+                                <!-- diet drop down: carnivore, herbivore, omnivore -->
+                                <div class="mb-3">
+                                    <select class="form-select" aria-label="Animal Diet">
+                                        <option selected>Animal Diet</option>
+                                        <option value="1">Carnivore</option>
+                                        <option value="2">Herbivore</option>
+                                        <option value="3">Omnivore</option>
+                                    </select>
+                                </div>
+                                <!-- lifespan two input number -->
+                                <div class="mb-3">
+                                    <div class="row">
+                                        <label for="lifespan" class="col-sm-4 col-form-label">Lifespan</label>
+                                        <div class="col">
+                                            <input type="number" class="form-control" id="start-lifespan" name="start-lifespan" required>
+                                        </div>
+                                        <span class="col-sm-1 col-form-label">to</span>
+                                        <div class="col">
+                                            <input type="number" class="form-control" id="end-lifespan" name="end-lifespan" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- extra information -->
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="animal-info" name="animal-info" rows="3" placeholder="Extra Information"></textarea>
+                                </div>
+                                <div class="mb-3 fw-bold">
+                                    <label for="animal-sound">Animal Sound</label>
+                                    <input type="file" id="animal-sound" name="animal-sound" accept="audio/*" class="form-control">
+                                </div>
+                                
+                                <!-- Reset button -->
+                                <button type="reset" class="btn btn-light d-block w-100 mb-3">Reset</button>
+                                
+                                
+                                <!-- Submit and Cancel buttons -->
+                                <div class="d-flex flex-column">
+                                    <a class="btn btn-primary d-block w-100 mb-3" href="animals.html">Add</a>
+                                    <a class="btn btn-danger d-block w-100 mb-3" href="animals.html">Cancel</a>
+                                </div>
+                            </form> 
+         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-light rounded-lg shadow mt-5 mt-md-5">
+        <div class="container-fluid max-w-xl mx-auto p-4 py-4 px-md-4 py-md-8">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <img src="images/logo.png" alt="PetAdoption" width="100" class="me-3 hover-scale-125">
+                        <span class="self-center fs-4 fw-semibold">PetAdoption</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-unstyled list-inline d-flex flex-wrap align-items-center text-sm fw-medium text-gray-500 mb-0 justify-content-center justify-content-md-end">
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">About</a>
+                        </li>
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">Licensing</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="contacts.html" class="text-decoration-none text-secondary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-200 mx-auto my-8">
+            <p class="text-center text-sm text-gray-500">© 2023 <a href="index.html" class="hover-underline">PetAdoption™</a>. All Rights Reserved.</p>
+        </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/navbarButtons.js"></script>
+    </body>
+
+</html>

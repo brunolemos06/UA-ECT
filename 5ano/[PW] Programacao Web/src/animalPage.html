@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Animal Page</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Include Bootstrap CSS
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-lg">
+            <div class="container-fluid px-lg-5">
+                <a href="index.html"><img class="logoImage" src="images/logo.png" alt="Logo" width="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-black"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav-item-effect navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item dropdown border-0 rounded-pill mx-lg-1 mx-sm-0">
+                            <a class="nav-link dropdown-toggle" style="color: var(--bs-primary);" href="#" id="animalsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Animals
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="animalsDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('all')">All Animals</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('dog')">Dogs</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('cat')">Cats</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('bird')">Birds</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="showAnimalContent('horse')">Horses</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item border border-0 rounded-pill mx-lg-1 mx-sm-0"><a class="nav-link" href="contacts.html">Contacts</a></li>
+                        <li class="nav-item border border-0 rounded ms-lg-5 ms-sm-0 bg-white"><a class="nav-link" href="login.html">Sign In</a></li>
+                        <li class="nav-item border border-0 rounded mx-lg-2 mx-lg-0 bg-primary"><a class="nav-link text-white" href="register.html">Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <header>
+        <div class="container mt-5">
+            <div class="row text-center mb-3">
+                <div class="col-12">
+                    <h1 class="fs-1 text-gray fw-semibold"></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="mb-5">
+        <div class="container mt-4 text-center">
+            <div class="row">
+                <div class="col-12 col-xl-6 mt-5">
+                    <div id="imageCarousel" class="carousel slide animalcard" data-bs-ride="carousel">
+                        <!-- Indicators (Optional) -->
+                        <ol class="carousel-indicators">
+                          <li data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"></li>
+                          <li data-bs-target="#imageCarousel" data-bs-slide-to="1"></li>
+                          <li data-bs-target="#imageCarousel" data-bs-slide-to="2"></li>
+                        </ol>
+                    
+                        <!-- Slides -->
+                        <div class="carousel-inner shadow-lg">
+                          <div class="carousel-item active">
+                            <img src="" class="d-block w-100" alt="Image 1">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="" class="d-block w-100" alt="Image 2">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="" class="d-block w-100" alt="Image 3">
+                          </div>
+                        </div>
+                    
+                        <!-- Controls -->
+                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 mt-4 col-xl-6 mt-xl-0 ">
+                    <!-- Animal Description Table -->
+                    <div class="container animalcard">
+                        <caption><h3></h3></caption>
+                        <table class="table table-bordered mt-4 shadow-sm">
+                            <tr>
+                                <th>Scientific Name</th>
+                                <td id="scientificName" class="text-decoration-underline"></td>
+                                <td id="scientificNameDescription"></td>
+                            </tr>
+                            <tr>
+                                <th>Habitat</th>
+                                <td id="habitat" class="text-decoration-underline"></td>
+                                <td id="habitatDescription"></td>
+                            </tr>
+                            <tr>
+                                <th>Diet</th>
+                                <td id="diet" class="text-decoration-underline"></td>
+                                <td id="dietDescription"></td>
+                            </tr>
+                            <tr>
+                                <th>Lifespan</th>
+                                <td id="lifespan" class="text-decoration-underline"></td>
+                                <td id="lifespanDescription"></td>
+                            </tr>
+                            <tr>
+                                <th>Animal Sound</th>
+                                <td colspan="2">
+                                    <audio controls id="animalSound">
+                                        <source src="" type="audio/mp3">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 mt-3">
+                    <div class="comment-section">
+                        <caption><h4>Comments</h4></caption>
+                        <table class="table table-bordered shadow-sm animalcard">
+                            <!-- Comment 1 -->
+                            <!-- <tr id="comment1">
+                                <th id="comment1Avatar"><img src="images/user.png" class="user-avatar" alt="User 1"></th>
+                                <td id="comment1Text"></td>
+                            </tr> -->
+                            <!-- Comment 2 -->
+                            <!-- <tr id="comment2">
+                                <th id="comment2Avatar"><img src="images/user.png" class="user-avatar" alt="User 2"></th>
+                                <td id="comment2Text"></td>
+                            </tr> -->
+                            <!-- Add more comments here -->
+                            <tr id="userComment">
+                                <td id="userCommentAvatar"><img src="images/user.png" class="user-avatar" alt="Your Avatar"></td>
+                                <td id="userCommentText">
+                                    <textarea id="commentTextArea" class="form-control" rows="3" placeholder="Add your comment..."></textarea>
+                                    <button id="submitCommentBtn" class="btn btn-primary mt-2">Submit</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 mt-5">
+                    <table class="table shadow-sm animalcard" border=1>
+                        <tr>
+                            <th colspan="3"><h4>Additional Information</h4></th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                    Open Information
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
+                                    Convert animal age to human age
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Additional Information</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+            <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabelCalculator">Convert Animal Age to Human</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="originalModalContent">
+                            <label for="animalAgeInput">Enter animal age:</label>
+                            <input type="number" id="animalAgeInput" class="form-control my-2" placeholder="Enter age">
+
+                            <label for="animalType">Select animal type:</label>
+                            <select id="animalType" class="form-control my-2">
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="bird">Bird</option>
+                                <option value="horse">Horse</option>
+                            </select>
+
+                            <button type="button" class="btn btn-primary mt-2" onclick="convertAnimalAge()">Convert</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="resetModal()" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-light rounded-lg shadow mt-5 mt-md-5">
+        <div class="container-fluid max-w-xl mx-auto p-4 py-4 px-md-4 py-md-8">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <img src="images/logo.png" alt="PetAdoption" width="100" class="me-3 hover-scale-125">
+                        <span class="self-center fs-4 fw-semibold">PetAdoption</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-unstyled list-inline d-flex flex-wrap align-items-center text-sm fw-medium text-gray-500 mb-0 justify-content-center justify-content-md-end">
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="index.html#about" class="text-decoration-none text-secondary">About</a>
+                        </li>
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item me-4 me-md-6">
+                            <a href="#" class="text-decoration-none text-secondary">Licensing</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="contacts.html" class="text-decoration-none text-secondary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-200 mx-auto my-8">
+            <p class="text-center text-sm text-gray-500">© 2023 <a href="index.html" class="hover-underline">PetAdoption™</a>. All Rights Reserved.</p>
+        </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/animalPage.js"></script>
+        <script src="js/navbarButtons.js"></script>
+    </body>
+
+</html>

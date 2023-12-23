@@ -1,0 +1,204 @@
+{
+    "animals" : [    
+      {
+        "name": "Zeus",
+        "images": [
+          "images/dog1image.jpg",
+          "images/dog4image.png",
+          "images/dog3image.jpg"
+        ],
+        "description": "Meet Zeus, a loving and playful Dog looking for her forever home!",
+        "type": "dog",
+        "scientificName": "Canis lupus familiaris",
+        "habitat": "Varies widely, commonly kept as pets",
+        "diet": "Omnivorous, often commercial dog food",
+        "lifespan": "10-13 years (varies by breed)",
+        "audio": "audio/dog-barking.mp3",
+        "additionalInformation": {
+          "ScientificNameDescription": "The scientific name for the domestic dog",
+          "HabitatDescription": "Dogs are incredibly adaptable and can thrive in a wide range of environments, but most are kept as pets.",
+          "DietDescription": "Dogs have a diverse diet, including both meat and plant-based foods. Commercial dog food is a common option.",
+          "LifespanDescription": "The average lifespan of a dog ranges from 10 to 13 years, but it can vary significantly based on the breed.",
+          "AdditionalDescription": "Dogs are known for their loyalty, companionship, and varied roles in human society, from working dogs to beloved family pets. They exhibit a wide range of behaviors, personalities, and physical characteristics due to their diverse breeds."
+        },
+        "comments": [
+          {
+              "user": "User1",
+              "text": "This dog is amazing!",
+              "timestamp": "2023-01-01T12:00:00Z"
+          },
+          {
+              "user": "User2",
+              "text": "I love Zeus's photos!",
+              "timestamp": "2023-01-02T14:30:00Z"
+          }
+        ]
+      },
+      {
+        "name": "BOB",
+        "images": [
+          "images/bob.JPG",
+          "images/Bob_02.jpg"
+        ],
+        "description": "Meet BOB, a loving and playful Dog looking for her forever home!",
+        "type": "dog",
+        "scientificName": "Canis lupus familiaris",
+        "habitat": "Varies widely, commonly kept as pets",
+        "diet": "Omnivorous, often commercial dog food",
+        "lifespan": "9-10 years",
+        "audio": "audio/dog-barking.mp3",
+        "additionalInformation": {
+          "ScientificNameDescription": "The scientific name for the domestic dog.",
+          "HabitatDescription": "Dogs are incredibly adaptable and can thrive in a wide range of environments, but most are kept as pets.",
+          "DietDescription": "The Rottweiler should do well on a high-quality dog food, whether commercially manufactured or home-prepared with your veterinarian's supervision and approval.",
+          "LifespanDescription": "The average lifespan of a dog ranges from 9 to 10 years, but it can vary significantly based on the breed.",
+          "AdditionalDescription": "Dogs are known for their loyalty, companionship, and varied roles in human society, from working dogs to beloved family pets. They exhibit a wide range of behaviors, personalities, and physical characteristics due to their diverse breeds."
+        },
+        "comments": [
+          {
+              "user": "User1",
+              "text": "This dog is amazing!",
+              "timestamp": "2023-01-01T12:00:00Z"
+          },
+          {
+              "user": "User2",
+              "text": "I love BOB's photos!",
+              "timestamp": "2023-01-02T14:30:00Z"
+          }
+        ]
+      },
+      {
+        "name": "STEPH",
+        "images": [
+          "images/Steph.JPG",
+          "images/Steph_02.JPG"
+        ],
+        "description": "Meet Steph, a beautiful Bengal cat with a fascinating history!",
+        "type": "cat",
+        "scientificName": "Felis bengalensis",
+        "habitat": "Varies widely, commonly kept as pets",
+        "diet": "Omnivorous, often commercial CAT food",
+        "lifespan": "12-16 years",
+        "audio": "audio/gato.mp3",
+        "additionalInformation": {
+          "ScientificNameDescription": "Felis bengalensis was the scientific name proposed by Robert Kerr in 1792 for a leopard cat from Bengal.",
+          "HabitatDescription": "The Bengal cat is a domesticated cat breed created from a hybrid of the Asian leopard cat, with domestic cats, especially the spotted Egyptian Mau.",
+          "DietDescription": "Cats are carnivores and their diet should contain 41 different and specific nutrients. The nutritional ratio will vary depending on their age, lifestyle, and general health, so it's not surprising that an energetic growing kitten requires a different nutritional balance in its diet compared to a less active senior cat.",
+          "LifespanDescription": "The average lifespan of a dog ranges from 9 to 10 years, but it can vary significantly based on the breed.",
+          "AdditionalDescription": "Cats are often valued by humans for companionship and for their ability to hunt vermin. There are more than seventy cat breeds recognized by various cat registries."
+        },
+        "comments": [
+          {
+              "user": "User1",
+              "text": "This dog is amazing!",
+              "timestamp": "2023-01-01T12:00:00Z"
+          },
+          {
+              "user": "User2",
+              "text": "I love STEPH's photos!",
+              "timestamp": "2023-01-02T14:30:00Z"
+          }
+        ]
+      },
+      {
+        "name": "Agatha",
+        "images": [
+          "images/Agatha.JPG",
+          "images/Agatha_02.JPG"
+        ],
+        "description": "Meet Agatha, a lovely Persian cat with a charming personality!",
+        "type": "cat",
+        "scientificName": "Felis catus",
+        "habitat": "Varies widely, commonly kept as pets",
+        "diet": "Omnivorous, often commercial CAT food",
+        "lifespan": "12-16 years",
+        "audio": "audio/gato.mp3",
+        "additionalInformation": {
+          "ScientificNameDescription": "The Persian cat, also known as the Persian longhair, is a long-haired breed of cat characterized by a round face and short muzzle.",
+          "HabitatDescription": "Persians are homebodies.",
+          "DietDescription": "Nutritionists recommend sticking to the feline natural diet and giving Persians food rich in whole meat, fish, and organs.",
+          "LifespanDescription": "Persian cats are a long-haired breed known for their luxurious coats and calm personalities. On average, the lifespan of a Persian cat typically ranges from 12 to 16 years.",
+          "AdditionalDescription": "Cats are often valued by humans for companionship and for their ability to hunt vermin. There are more than seventy cat breeds recognized by various cat registries."
+        },
+        "comments": [
+          {
+              "user": "User1",
+              "text": "This dog is amazing!",
+              "timestamp": "2023-01-01T12:00:00Z"
+          },
+          {
+              "user": "User2",
+              "text": "I love Agatha's photos!",
+              "timestamp": "2023-01-02T14:30:00Z"
+          }
+        ]
+      },
+      {
+        "name": "Gema",
+        "images": [
+          "images/Gema.JPG",
+          "images/Gema_02.JPG"
+        ],
+        "description": "Meet Gema, a lively bird ready to bring joy to your home!",
+        "type": "bird",
+        "scientificName": "Melopsittacus undulatus",
+        "habitat": "Wild/Captivity",
+        "diet": "Herbivores (granivores)",
+        "lifespan": "7-15 years (In captivity)",
+        "audio": "audio/bird.mp3",
+        "additionalInformation": {
+          "ScientificNameDescription": "The Persian cat, also known as the Persian longhair, is a long-haired breed of cat characterised by a round face and short muzzle.",
+          "HabitatDescription": "Budgerigars occupy a range of semi-arid and sub-humid habitats mainly in the interior of Australia. However, they sometimes can be found in dry grasslands of the southeast.",
+          "DietDescription": "Budgerigars (Melopsittacus undulatus) are popular companion animals classified as granivores. In the wild, the budgerigar diet consists almost entirely of native Australian grass seeds.",
+          "LifespanDescription": "In captivity, budgies can live anywhere between 7-15 years of age. This is almost twice the life expectancy of a wild budgie. In the wild, budgies can live between 4-6 years because of threats of predation.",
+          "AdditionalDescription": "Birds are a group of warm-blooded vertebrates constituting the class Aves, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5.5 cm (2.2 in) bee hummingbird to the 2.8 m (9 ft 2 in) ostrich. There are about ten thousand living species, more than half of which are passerine, or 'perching' birds. Birds have wings whose development varies according to species; the only known groups without wings are the extinct moa and elephant birds. Wings, which evolved from forelimbs, gave birds the ability to fly, although further evolution has led to the loss of flight in some birds, including ratites, penguins, and diverse endemic island species. The digestive and respiratory systems of birds are also uniquely adapted for flight. Some bird species of aquatic environments, particularly seabirds and some waterbirds, have further evolved for swimming."
+        },
+        "comments": [
+          {
+              "user": "User1",
+              "text": "This dog is amazing!",
+              "timestamp": "2023-01-01T12:00:00Z"
+          },
+          {
+              "user": "User2",
+              "text": "I love Gema's photos!",
+              "timestamp": "2023-01-02T14:30:00Z"
+          }
+        ]
+      },
+      {
+        "name": "Rose",
+        "images": [
+          "images/Rose.JPG",
+          "images/Rose_01.JPG"
+        ],
+        "description": "Meet Rose, a charming bird ready to enchant your home!",
+        "type": "bird",
+        "scientificName": "Melopsittacus undulatus",
+        "habitat": "Wild/Captivity",
+        "diet": "Herbivores (granivores)",
+        "lifespan": "7-15 years (In captivity)",
+        "audio": "audio/bird.mp3",
+        "additionalInformation": {
+          "ScientificNameDescription": "The Persian cat, also known as the Persian longhair, is a long-haired breed of cat characterised by a round face and short muzzle.",
+          "HabitatDescription": "Budgerigars occupy a range of semi-arid and sub-humid habitats mainly in the interior of Australia. However, they sometimes can be found in dry grasslands of the southeast.",
+          "DietDescription": "Budgerigars (Melopsittacus undulatus) are popular companion animals classified as granivores. In the wild, the budgerigar diet consists almost entirely of native Australian grass seeds.",
+          "LifespanDescription": "In captivity, budgies can live anywhere between 7-15 years of age. This is almost twice the life expectancy of a wild budgie. In the wild, budgies can live between 4-6 years because of threats of predation.",
+          "AdditionalDescription": "Birds are a group of warm-blooded vertebrates constituting the class Aves, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5.5 cm (2.2 in) bee hummingbird to the 2.8 m (9 ft 2 in) ostrich. There are about ten thousand living species, more than half of which are passerine, or 'perching' birds. Birds have wings whose development varies according to species; the only known groups without wings are the extinct moa and elephant birds. Wings, which evolved from forelimbs, gave birds the ability to fly, although further evolution has led to the loss of flight in some birds, including ratites, penguins, and diverse endemic island species. The digestive and respiratory systems of birds are also uniquely adapted for flight. Some bird species of aquatic environments, particularly seabirds and some waterbirds, have further evolved for swimming."
+        },
+        "comments": [
+          {
+              "user": "User1",
+              "text": "This dog is amazing!",
+              "timestamp": "2023-01-01T12:00:00Z"
+          },
+          {
+              "user": "User2",
+              "text": "I love Rose's photos!",
+              "timestamp": "2023-01-02T14:30:00Z"
+          }
+        ]
+      }
+    ]
+}
+  
