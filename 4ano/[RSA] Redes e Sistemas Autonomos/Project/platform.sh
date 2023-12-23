@@ -1,0 +1,2 @@
+cd platform
+npm start

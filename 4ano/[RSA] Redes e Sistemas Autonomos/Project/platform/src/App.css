@@ -1,0 +1,201 @@
+.App {
+  font-family: sans-serif;
+}
+.appmain {
+  text-align: center;
+  /* grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1vh;
+  padding: 1vh;
+  grid-gap: 1vh;
+  
+}
+.header {
+  /* grid */
+  background-color: #6eaeac;
+  color: white;
+  text-align: center;
+  padding: 0.1vh;
+  font: 2vh bold;
+  display: grid;
+  padding-left: 1vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 12fr;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* grid */
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  border: 3px solid #365756;
+  gap: 1vh;
+  padding: 1vh;
+  
+}
+
+.nauticlheader {
+  font-size: 2.5vh;
+  font-weight: bold;
+  color: #365756;
+}
+
+.grid {
+  position: relative;
+  width: 1500px;
+  height: 750px;
+  border: 3px solid #365756;
+  margin: 0 auto;
+  /* background img */
+  background-image: url("https://us.123rf.com/450wm/pskov/pskov2107/pskov210700001/171940772-pixel-art-water-background-seamless-sea-texture-backdrop-vector-illustration.jpg?ver=6");
+  /* slide to left */
+  /* border  */
+  
+}
+
+.square {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid #bebebe; */
+}
+
+
+/* put an specify square with color */
+/* .square:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  background-color: #ffffff;
+} */
+.name {
+  font-size: 1.5vh;
+  font-weight: bold;
+  color: #365756;
+  /* all elemtns display horizontal */
+  margin-top: -2.6vh;
+}
+
+.namediv{
+  /* circle */
+  border-radius: 50%;
+  /* border */
+  background-color: #ececec;
+  width: 20px;
+  height: 20px;
+  /* margin */
+  margin-top: 2vh;
+  margin-left: 1vh;
+}
+
+.dataduv {
+  /* center in center of the screen with positon absolute */
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4cafac;
+  color: white;
+}
+
+.tableh{
+  background-color: #4cafac;
+  color: white;
+  /* size */
+  /* very bold */
+  font:  bold;
+  width: 2.5vh;
+
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.footer {
+  position: absolute;
+  bottom: 3vh;
+  left : 50%;
+  /* center */
+}
+
+.footer_word{
+  font-size: 1.3vh;
+}
+
+.status{
+  font-size: 1.3vh;
+  font-weight: bold;
+  color: #365756;
+  /* all elemtns display horizontal */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* grid */
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border: 1px solid #365756;
+  background-color: #daf3f2;
+  
+}
+
+.container2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button{
+  /* border */
+  
+  border:  solid white;
+  box-shadow: #365756;
+  /* background color */
+  background-color: #4cafac;
+  /* size */
+  border-radius: 5px;
+  width: 10vh;
+  height: 4vh;
+  /* margin */
+  /* font */
+  font-size: 1.3vh;
+  font-weight: bold;
+  color: white;
+  /* all elemtns display horizontal */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* on ho */
+  z-index: 2;
+}
+
+.button:hover {
+  background-color: #365756;
+  color: white;
+  cursor: pointer;
+}
